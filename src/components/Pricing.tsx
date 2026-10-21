@@ -34,8 +34,8 @@ const packages: PricingPackage[] = [
     delivery: "1–2 working days",
     cta: "Choose Simple",
     option: "Simple Website – RM399",
+    badge: "Basic",
   },
-  badge: "Basic",
   {
     number: "02",
     name: "Business Website",
