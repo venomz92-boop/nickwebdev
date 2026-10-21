@@ -12,82 +12,76 @@ type PricingPackage = {
   cta: string;
   option: PackageOption;
   featured?: boolean;
+  premium?: boolean;
+  badge?: string;
 };
 
 const packages: PricingPackage[] = [
   {
     number: "01",
-    name: "Landing Page Creation",
+    name: "Simple Website",
     price: "RM399",
     description:
-      "A focused one-page website for a promotion, product, service, or small business.",
+      "A clear one-page website for businesses that need a simple, professional place online.",
     includes: [
-      "One-page responsive website",
-      "Business introduction and service information",
-      "Client-provided text and images",
+      "One-page website",
+      "Business introduction, services, photos and contact details",
       "WhatsApp contact button",
-      "Contact details and social links",
-      "Basic SEO metadata",
-      "GitHub repository setup",
-      "Cloudflare Pages deployment",
-      "One round of revisions",
+      "Works on phones and computers",
+      "Website published online",
+      "One round of changes",
     ],
-    delivery: "3–5 working days after receiving all required content.",
-    cta: "Choose Landing Page",
-    option: "Landing Page – RM399",
+    delivery: "3–5 working days",
+    cta: "Choose Simple",
+    option: "Simple Website – RM399",
   },
   {
     number: "02",
-    name: "Starter Website",
+    name: "Business Website",
     price: "RM799",
     description:
-      "A professional website for a small business that needs a stronger online presence.",
+      "A website of up to three pages, with room to introduce your business and explain your services.",
     includes: [
-      "Responsive small-business website",
-      "Business introduction and services",
-      "Agreed sections and page structure",
-      "Contact details and social media links",
-      "WhatsApp integration",
-      "Basic SEO metadata",
-      "GitHub repository setup",
-      "Cloudflare Pages deployment",
-      "One round of revisions",
+      "Everything in Simple Website",
+      "Up to three pages, such as Home, About and Services",
+      "Separate pages for business information and services",
+      "Navigation menu",
+      "Basic Google search information setup",
+      "Two rounds of changes",
     ],
-    delivery: "3–5 working days after receiving all required content.",
-    cta: "Choose Starter",
-    option: "Starter Website – RM799",
+    delivery: "5–7 working days",
+    cta: "Choose Business",
+    option: "Business Website – RM799",
     featured: true,
+    badge: "Recommended",
   },
   {
     number: "03",
-    name: "Business Website",
+    name: "Business Website Plus",
     price: "RM1,299",
     description:
-      "A multi-page website for businesses that need more room to explain their services.",
+      "A larger website of up to five pages, with a contact form and useful extra sections.",
     includes: [
+      "Everything in Business Website",
       "Up to five pages",
-      "Responsive layouts",
-      "Business introduction and service pages",
-      "WhatsApp integration",
-      "Contact form setup and testing",
-      "Basic SEO metadata",
-      "GitHub repository setup",
-      "Cloudflare Pages deployment",
-      "Two rounds of revisions",
+      "Customer contact form with submission testing",
+      "FAQ section",
+      "Photo gallery or portfolio section",
+      "Three rounds of changes",
     ],
-    delivery: "5–8 working days after receiving all required content.",
-    cta: "Choose Business",
-    option: "Business Website – RM1,299",
+    delivery: "7–10 working days",
+    cta: "Choose Plus",
+    option: "Business Website Plus – RM1,299",
+    premium: true,
+    badge: "Most complete",
   },
 ];
 
 const terms = [
-  "A 50% deposit is required before work begins.",
-  "The remaining 50% is due before final handover.",
-  "The client must supply the required business information, text, and images.",
-  "Domain registration and paid third-party services are not included.",
-  "Additional revisions and requests outside the agreed scope may incur extra charges.",
-  "Custom databases, booking systems, payment gateways, and complex integrations require separate assessment and quotation.",
+  "50% deposit before work begins and 50% before final handover.",
+  "Clients provide their business information, text and photos.",
+  "Domain fees and paid third-party services are excluded.",
+  "Complex booking systems, online payments and custom features require a separate quotation.",
 ];
 
 type PricingProps = {
@@ -111,8 +105,8 @@ export function Pricing({ onSelectPackage }: PricingProps) {
             </h2>
           </div>
           <p className="section-lede">
-            Clear packages for businesses at different stages. Every project has a
-            defined scope, so you know what is included before work begins.
+            Three clear packages for different stages of business. Each package lists
+            exactly what is included, so you know what to expect before work begins.
           </p>
         </Reveal>
 
@@ -124,13 +118,17 @@ export function Pricing({ onSelectPackage }: PricingProps) {
         <div className="pricing-grid">
           {packages.map((item, index) => (
             <Reveal
-              className={`pricing-card${item.featured ? " pricing-card--featured" : ""}`}
+              className={`pricing-card${item.featured ? " pricing-card--featured" : ""}${item.premium ? " pricing-card--premium" : ""}`}
               key={item.option}
               delay={index * 80}
               as="article"
             >
-              {item.featured && (
-                <span className="pricing-card__badge">Recommended</span>
+              {item.badge && (
+                <span
+                  className={`pricing-card__badge${item.premium ? " pricing-card__badge--premium" : ""}`}
+                >
+                  {item.badge}
+                </span>
               )}
               <div className="pricing-card__top">
                 <span className="pricing-card__number">{item.number}</span>
@@ -146,7 +144,7 @@ export function Pricing({ onSelectPackage }: PricingProps) {
 
               <div className="pricing-card__divider" />
 
-              <p className="pricing-card__includes-label">What's included</p>
+              <p className="pricing-card__includes-label">What you get</p>
               <ul className="pricing-card__list">
                 {item.includes.map((feature) => (
                   <li key={feature}>
@@ -161,7 +159,7 @@ export function Pricing({ onSelectPackage }: PricingProps) {
               <div className="pricing-card__delivery">
                 <Clock size={16} />
                 <span>
-                  <strong>Estimated delivery</strong>
+                  <strong>Estimated completion</strong>
                   {item.delivery}
                 </span>
               </div>
@@ -178,6 +176,18 @@ export function Pricing({ onSelectPackage }: PricingProps) {
           ))}
         </div>
 
+        <Reveal className="pricing-rounds" delay={80}>
+          <span className="pricing-rounds__label">Good to know</span>
+          <div>
+            <h3>What counts as a round of changes?</h3>
+            <p>
+              A round of changes means one submitted list of reasonable changes to the
+              agreed website. New pages, new features and major changes outside the
+              agreed scope may cost extra.
+            </p>
+          </div>
+        </Reveal>
+
         <Reveal className="pricing-terms">
           <div className="pricing-terms__intro">
             <p className="eyebrow">
@@ -186,8 +196,8 @@ export function Pricing({ onSelectPackage }: PricingProps) {
             </p>
             <h3>Pricing terms</h3>
             <p>
-              Every project begins with a written scope. These terms apply to the
-              standard website packages listed above.
+              Every project starts with a clear written plan. These terms apply to all
+              three packages above.
             </p>
           </div>
           <ul className="pricing-terms__list">

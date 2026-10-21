@@ -31,9 +31,9 @@ export const contactEmailHref = siteConfig.email
   : null;
 
 export const packageOptions = [
-  "Landing Page – RM399",
-  "Starter Website – RM799",
-  "Business Website – RM1,299",
+  "Simple Website – RM399",
+  "Business Website – RM799",
+  "Business Website Plus – RM1,299",
   "Not Sure Yet",
 ] as const;
 

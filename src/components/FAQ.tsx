@@ -6,12 +6,12 @@ const faqs = [
   {
     question: "How much does a website cost?",
     answer:
-      "My packages start at RM399 for a landing page, RM799 for a starter website, and RM1,299 for a business website with up to five pages.",
+      "My packages start at RM399 for a simple one-page website, RM799 for a business website with up to three pages, and RM1,299 for Business Website Plus with up to five pages.",
   },
   {
     question: "How long does it take?",
     answer:
-      "A landing page or starter website typically takes 3–5 working days. A business website typically takes 5–8 working days after all required content is received. Timelines may vary with scope and feedback.",
+      "A Simple Website usually takes 3–5 working days, a Business Website 5–7 working days, and Business Website Plus 7–10 working days after all required content is received. Timelines may vary with scope and feedback.",
   },
   {
     question: "Do I need to buy a domain?",
