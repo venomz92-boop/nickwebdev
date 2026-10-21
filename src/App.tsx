@@ -1,0 +1,65 @@
+import { useState } from "react";
+import { Contact } from "./components/Contact";
+import { FAQ } from "./components/FAQ";
+import { FeatureStrip } from "./components/FeatureStrip";
+import { Footer } from "./components/Footer";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { Portfolio } from "./components/Portfolio";
+import { Pricing } from "./components/Pricing";
+import { Process } from "./components/Process";
+import { Services } from "./components/Services";
+import type { PackageOption } from "./config";
+
+export default function App() {
+  const [selectedPackage, setSelectedPackage] = useState<PackageOption>("Not Sure Yet");
+
+  const handleSelectPackage = (option: PackageOption) => {
+    setSelectedPackage(option);
+
+    window.requestAnimationFrame(() => {
+      const form = document.getElementById("contact-form");
+      if (!form) return;
+
+      const reduceMotion = window.matchMedia(
+        "(prefers-reduced-motion: reduce)",
+      ).matches;
+
+      form.scrollIntoView({
+        behavior: reduceMotion ? "auto" : "smooth",
+        block: "start",
+      });
+
+      window.setTimeout(
+        () => {
+          document.getElementById("package")?.focus({ preventScroll: true });
+        },
+        reduceMotion ? 0 : 550,
+      );
+    });
+  };
+
+  return (
+    <>
+      <a className="skip-link" href="#main-content">
+        Skip to content
+      </a>
+      <Header />
+      <main id="main-content">
+        <div id="top" />
+        <Hero />
+        <FeatureStrip />
+        <Services />
+        <Pricing onSelectPackage={handleSelectPackage} />
+        <Portfolio />
+        <Process />
+        <Contact
+          selectedPackage={selectedPackage}
+          onPackageChange={setSelectedPackage}
+        />
+        <FAQ />
+      </main>
+      <Footer />
+    </>
+  );
+}
