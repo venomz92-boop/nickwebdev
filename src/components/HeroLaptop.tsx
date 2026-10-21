@@ -1,12 +1,13 @@
-import highland from "../assets/highland.jpg";
 import { ArrowUpRight } from "./Icons";
+
+const keyboardRows = Array.from({ length: 6 });
 
 export function HeroLaptop() {
   return (
     <div
       className="hero-device"
       role="img"
-      aria-label="A laptop showing an example website for a fictional highland retreat, with a full-width landscape image, elegant navigation, and a booking panel."
+      aria-label="An angled laptop showing an example website for a fictional digital studio, with a dark violet abstract backdrop, editorial headline, and a keyboard lit by a soft purple glow."
     >
       <div className="hero-device__grid" aria-hidden="true" />
       <div className="hero-device__aura" aria-hidden="true" />
@@ -17,52 +18,42 @@ export function HeroLaptop() {
           <div className="laptop__bezel">
             <span className="laptop__camera" />
             <div className="laptop__screen">
-              <div className="demo-site alpa">
-                <div className="alpa__nav">
-                  <span className="alpa__brand">ALPA</span>
-                  <span className="alpa__links">Stays&nbsp;&nbsp;&nbsp;Journal&nbsp;&nbsp;&nbsp;About</span>
-                  <span className="alpa__navcta">Book a stay</span>
+              <div className="demo-site nova">
+                <div className="nova__art">
+                  <span className="nova__smoke nova__smoke--one" />
+                  <span className="nova__smoke nova__smoke--two" />
+                  <span className="nova__ring" />
                 </div>
 
-                <div className="alpa__hero">
-                  <img src={highland} alt="" />
-                  <div className="alpa__shade" />
-                  <div className="alpa__copy">
-                    <span className="alpa__kicker">Kundasang · Sabah</span>
-                    <h3>
-                      Find your quiet
-                      <br />
-                      above the clouds.
-                    </h3>
-                    <p>Considered stays in the highlands of Sabah.</p>
-                    <span className="alpa__cta">
-                      Explore stays <ArrowUpRight size={11} />
-                    </span>
-                  </div>
-
-                  <div className="alpa__booking">
-                    <span className="alpa__booking-title">Plan your stay</span>
-                    <span className="alpa__field">
-                      <small>Check in</small>
-                      <strong>Add date</strong>
-                    </span>
-                    <span className="alpa__field">
-                      <small>Check out</small>
-                      <strong>Add date</strong>
-                    </span>
-                    <span className="alpa__field">
-                      <small>Guests</small>
-                      <strong>2 guests</strong>
-                    </span>
-                    <span className="alpa__bookbtn">Check availability</span>
-                  </div>
+                <div className="nova__nav">
+                  <span className="nova__brand">
+                    <span className="nova__mark" />
+                    NOVA
+                  </span>
+                  <span className="nova__links">Work&nbsp;&nbsp;&nbsp;Studio&nbsp;&nbsp;&nbsp;Contact</span>
+                  <span className="nova__navcta">Let's talk</span>
                 </div>
 
-                <div className="alpa__foot">
-                  <span>ALPA / Highland stays</span>
-                  <span>Stays with a slower pace.</span>
-                  <span>Sabah, Malaysia</span>
+                <div className="nova__copy">
+                  <span className="nova__kicker">Independent digital studio</span>
+                  <h3>
+                    Websites with
+                    <br />
+                    <span>a point of view.</span>
+                  </h3>
+                  <p>Brand, web and digital product design for ambitious teams.</p>
+                  <span className="nova__cta">
+                    View selected work <ArrowUpRight size={11} />
+                  </span>
                 </div>
+
+                <div className="nova__foot">
+                  <span>Strategy · Design · Development</span>
+                  <span>Kuala Lumpur</span>
+                  <span>Scroll ↓</span>
+                </div>
+
+                <span className="nova__vignette" />
               </div>
 
               <span className="laptop__glare" />
@@ -70,14 +61,31 @@ export function HeroLaptop() {
           </div>
         </div>
 
-        <div className="laptop__base">
+        <div className="laptop__deck">
+          <span className="laptop__hinge" />
+          <div className="laptop__keyboard">
+            {keyboardRows.map((_, row) => (
+              <div className="laptop__keyrow" key={row}>
+                {row === 5 ? (
+                  <>
+                    <span className="laptop__key laptop__key--wide" />
+                    <span className="laptop__key" />
+                    <span className="laptop__key laptop__key--space" />
+                    <span className="laptop__key" />
+                    <span className="laptop__key laptop__key--wide" />
+                  </>
+                ) : (
+                  Array.from({ length: 14 }).map((__, key) => (
+                    <span className="laptop__key" key={key} />
+                  ))
+                )}
+              </div>
+            ))}
+          </div>
+          <span className="laptop__trackpad" />
+          <span className="laptop__deck-shine" />
           <span className="laptop__notch" />
         </div>
-      </div>
-
-      <div className="hero-device__caption" aria-hidden="true">
-        <span />
-        Design. Build. Launch.
       </div>
     </div>
   );

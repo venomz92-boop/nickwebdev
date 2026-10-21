@@ -1,5 +1,5 @@
 /* ============================================================
-   Nick's WebDev — design tokens, base styles, and page sections
+   Nick's WebDev - design tokens, base styles, and page sections
    ============================================================ */
 
 @font-face {
@@ -670,7 +670,7 @@ button {
 
 .hero-device {
   position: relative;
-  padding: 14px 0 47px;
+  padding: 8px 0 104px;
   perspective: 1800px;
 }
 
@@ -688,18 +688,18 @@ button {
 
 .hero-device__aura {
   position: absolute;
-  right: 2%;
-  bottom: 1%;
-  left: 5%;
-  height: 47%;
+  right: 0;
+  bottom: -2%;
+  left: 2%;
+  height: 52%;
   border-radius: 50%;
   background: radial-gradient(
     ellipse at center,
-    rgba(76, 112, 255, 0.34) 0%,
-    rgba(129, 82, 255, 0.14) 38%,
+    rgba(91, 112, 255, 0.42) 0%,
+    rgba(142, 82, 255, 0.2) 38%,
     transparent 72%
   );
-  filter: blur(26px);
+  filter: blur(30px);
   pointer-events: none;
 }
 
@@ -727,27 +727,40 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 690px;
+  max-width: 720px;
   margin-left: auto;
-  transform: rotateY(-6deg) rotateX(3deg) rotateZ(-1.1deg);
+  transform: rotateX(2.5deg) rotateY(-23deg) rotateZ(-1.8deg);
+  transform-origin: 50% 90%;
   transform-style: preserve-3d;
-  transition: transform 0.6s var(--ease);
+  transition: transform 0.7s var(--ease);
 }
 
 .hero-device:hover .laptop {
-  transform: rotateY(-3deg) rotateX(1.5deg) rotateZ(-0.4deg);
+  transform: rotateX(1deg) rotateY(-17deg) rotateZ(-1.1deg);
+}
+
+@media (min-width: 1100px) {
+  .laptop {
+    width: 110%;
+    max-width: 760px;
+    margin-right: -10%;
+  }
 }
 
 .laptop__lid {
-  padding: 10px 10px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.13);
-  border-radius: 18px;
-  background: linear-gradient(145deg, #3b4252 0%, #161a24 16%, #090b10 58%, #222837 100%);
+  position: relative;
+  z-index: 2;
+  padding: 10px 10px 13px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 19px;
+  background: linear-gradient(145deg, #454c5b 0%, #1a1e28 15%, #0a0c12 58%, #282e3b 100%);
   box-shadow:
-    0 48px 90px rgba(0, 0, 0, 0.62),
-    0 8px 26px rgba(0, 0, 0, 0.5),
-    0 0 90px rgba(91, 77, 255, 0.17),
-    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    0 52px 100px rgba(0, 0, 0, 0.64),
+    0 10px 30px rgba(0, 0, 0, 0.48),
+    0 0 110px rgba(104, 76, 255, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transform: rotateX(-2deg);
+  transform-origin: bottom center;
 }
 
 .laptop__bezel {
@@ -785,8 +798,8 @@ button {
   pointer-events: none;
   background: linear-gradient(
     123deg,
-    rgba(255, 255, 255, 0.13) 0%,
-    rgba(255, 255, 255, 0.015) 24%,
+    rgba(255, 255, 255, 0.09) 0%,
+    rgba(255, 255, 255, 0.012) 24%,
     transparent 48%,
     rgba(120, 90, 255, 0.035) 76%,
     transparent 100%
@@ -794,60 +807,150 @@ button {
   mix-blend-mode: screen;
 }
 
-.laptop__base {
-  position: relative;
-  width: 108%;
-  height: 17px;
-  margin-left: -4%;
-  border-top: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 0 0 17px 17px;
-  background: linear-gradient(180deg, #404858 0%, #10131a 44%, #1a1e28 100%);
+.laptop__deck {
+  position: absolute;
+  top: 99.4%;
+  left: 0.3%;
+  z-index: 1;
+  width: 99.4%;
+  height: 0;
+  padding-bottom: 43%;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 2.6% 2.6% 4.5% 4.5%;
+  background:
+    linear-gradient(180deg, #4c5464 0%, #242a35 3%, #1a1f28 18%, #10131a 100%);
   box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 2px 0 rgba(255, 255, 255, 0.09),
+    0 45px 80px rgba(0, 0, 0, 0.62),
+    0 0 80px rgba(92, 67, 255, 0.13);
+  transform: rotateX(73deg);
+  transform-origin: top center;
+  transform-style: preserve-3d;
 }
 
-.laptop__base::before {
+.laptop__deck::before {
   content: "";
   position: absolute;
-  inset: 0 20% auto;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.24);
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    104deg,
+    rgba(255, 255, 255, 0.075) 0%,
+    transparent 26%,
+    transparent 68%,
+    rgba(143, 118, 255, 0.08) 100%
+  );
+  pointer-events: none;
+}
+
+.laptop__deck::after {
+  content: "";
+  position: absolute;
+  right: 2%;
+  bottom: 0;
+  left: 2%;
+  height: 2.4%;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(90deg, #151923, #596171 50%, #151923);
+  box-shadow: 0 0 30px rgba(140, 96, 255, 0.5);
+}
+
+.laptop__hinge {
+  position: absolute;
+  top: -0.4%;
+  right: 7%;
+  left: 7%;
+  height: 1.1%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.9), transparent);
+}
+
+.laptop__keyboard {
+  position: absolute;
+  top: 5.5%;
+  right: 7.5%;
+  left: 7.5%;
+  display: flex;
+  height: 55%;
+  flex-direction: column;
+  gap: 1.8%;
+  padding: 2% 2.4%;
+  border-radius: 1.6%;
+  background: #07090d;
+  box-shadow:
+    inset 0 0 2.6cqw rgba(0, 0, 0, 0.85),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.laptop__keyrow {
+  display: flex;
+  min-height: 0;
+  flex: 1;
+  gap: 0.55%;
+}
+
+.laptop__key {
+  flex: 1;
+  border-radius: 0.26cqw;
+  background: linear-gradient(180deg, #2a303c 0%, #12161d 54%, #080a0e 100%);
+  box-shadow:
+    inset 0 0.07cqw 0 rgba(255, 255, 255, 0.12),
+    0 0.14cqw 0.24cqw rgba(0, 0, 0, 0.65);
+}
+
+.laptop__key--wide {
+  flex: 2.2;
+}
+
+.laptop__key--space {
+  flex: 6;
+}
+
+.laptop__trackpad {
+  position: absolute;
+  bottom: 5%;
+  left: 34%;
+  width: 32%;
+  height: 25%;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 1.2%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.035), transparent 46%),
+    #141821;
+  box-shadow:
+    inset 0 0 1.4cqw rgba(0, 0, 0, 0.5),
+    0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.laptop__deck-shine {
+  position: absolute;
+  inset: auto 0 0;
+  height: 40%;
+  border-radius: inherit;
+  background: radial-gradient(
+    ellipse at 50% 110%,
+    rgba(125, 82, 255, 0.19),
+    transparent 68%
+  );
+  pointer-events: none;
 }
 
 .laptop__notch {
   position: absolute;
-  top: 0;
+  bottom: -0.3%;
   left: 50%;
-  width: 66px;
-  height: 5px;
-  border-radius: 0 0 7px 7px;
-  background: #080a0f;
+  z-index: 3;
+  width: 9%;
+  height: 1.7%;
+  border-radius: 0 0 999px 999px;
+  background: linear-gradient(180deg, #090b10, #030407);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.14);
   transform: translateX(-50%);
 }
 
-.hero-device__caption {
-  position: absolute;
-  right: 5%;
-  bottom: 9px;
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: #8b93a6;
-  font-size: 9px;
-  font-weight: 550;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
 
-.hero-device__caption span {
-  width: 18px;
-  height: 1px;
-  background: linear-gradient(90deg, var(--blue), var(--violet));
-}
 
-/* Miniature ALPA website inside the hero laptop */
+/* Fictional studio website inside the hero laptop */
 
 .demo-site {
   height: 100%;
@@ -856,187 +959,235 @@ button {
   font-family: var(--font-body);
 }
 
-.alpa {
+/* Fictional studio website inside the hero laptop */
+
+.nova {
+  position: relative;
   display: grid;
-  grid-template-rows: 9.2% 78% 12.8%;
-  background: #0a0d13;
+  grid-template-rows: 10% 1fr 11%;
+  overflow: hidden;
+  background: #05060b;
+  color: #fff;
 }
 
-.alpa__nav {
+.nova__art {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 74% 36%, rgba(150, 88, 255, 0.34), transparent 35%),
+    radial-gradient(ellipse at 88% 68%, rgba(83, 60, 255, 0.24), transparent 45%),
+    radial-gradient(ellipse at 58% 88%, rgba(54, 92, 255, 0.2), transparent 52%),
+    #05060b;
+}
+
+.nova__art::before {
+  content: "";
+  position: absolute;
+  top: 16%;
+  right: 13%;
+  width: 34%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(205, 156, 255, 0.8),
+    rgba(111, 64, 255, 0.32) 44%,
+    transparent 70%
+  );
+  filter: blur(1.4cqw);
+}
+
+.nova__smoke {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2.8cqw);
+}
+
+.nova__smoke--one {
+  top: -30%;
+  right: -10%;
+  width: 66%;
+  aspect-ratio: 1.1;
+  background: conic-gradient(
+    from 200deg at 50% 50%,
+    rgba(20, 10, 55, 0.12),
+    rgba(103, 58, 255, 0.85),
+    rgba(33, 16, 90, 0.55),
+    rgba(164, 86, 255, 0.75),
+    rgba(12, 7, 35, 0.12)
+  );
+  transform: rotate(14deg);
+}
+
+.nova__smoke--two {
+  right: 6%;
+  bottom: -34%;
+  width: 46%;
+  aspect-ratio: 1;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(96, 72, 255, 0.9),
+    rgba(52, 27, 150, 0.32) 50%,
+    transparent 70%
+  );
+  transform: rotate(-8deg);
+}
+
+.nova__ring {
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  width: 42%;
+  aspect-ratio: 1.55;
+  border: 1px solid rgba(206, 178, 255, 0.26);
+  border-radius: 50%;
+  box-shadow: inset 0 0 4cqw rgba(126, 79, 255, 0.18);
+  transform: rotate(-26deg);
+}
+
+.nova__ring::after {
+  content: "";
+  position: absolute;
+  inset: 9%;
+  border: 1px solid rgba(146, 112, 255, 0.14);
+  border-radius: inherit;
+}
+
+.nova__nav {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3.4cqw;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: #0b0e14;
+  padding: 0 3.6cqw;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(5, 7, 13, 0.92), rgba(5, 7, 13, 0.28));
 }
 
-.alpa__brand {
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 1.85cqw;
-  font-weight: 650;
-  letter-spacing: 0.25em;
-}
-
-.alpa__links {
-  color: rgba(255, 255, 255, 0.62);
-  font-size: 1.1cqw;
-  letter-spacing: 0.07em;
-}
-
-.alpa__navcta {
-  padding: 0.8cqw 1.6cqw;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 99px;
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95cqw;
-  letter-spacing: 0.09em;
-  text-transform: uppercase;
-}
-
-.alpa__hero {
-  position: relative;
-  overflow: hidden;
-}
-
-.alpa__hero img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: 50% 54%;
-  filter: saturate(0.78) brightness(0.72) contrast(1.05);
-}
-
-.alpa__shade {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, rgba(5, 8, 13, 0.86) 0%, rgba(5, 8, 13, 0.25) 51%, rgba(5, 8, 13, 0.28) 100%),
-    linear-gradient(0deg, rgba(5, 8, 13, 0.65), transparent 50%);
-}
-
-.alpa__copy {
-  position: absolute;
-  top: 50%;
-  left: 5.1cqw;
-  z-index: 2;
-  width: 54%;
-  transform: translateY(-52%);
-}
-
-.alpa__kicker {
-  display: block;
-  margin-bottom: 1.4cqw;
-  color: rgba(255, 255, 255, 0.66);
-  font-size: 0.9cqw;
-  font-weight: 500;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-}
-
-.alpa__copy h3 {
-  color: #fff;
-  font-family: var(--font-display);
-  font-size: 5.65cqw;
-  font-weight: 470;
-  line-height: 0.95;
-  letter-spacing: -0.048em;
-}
-
-.alpa__copy p {
-  margin-top: 1.5cqw;
-  color: rgba(255, 255, 255, 0.67);
-  font-size: 1.22cqw;
-  line-height: 1.55;
-}
-
-.alpa__cta {
-  display: inline-flex;
+.nova__brand {
+  display: flex;
   align-items: center;
   gap: 0.7cqw;
-  margin-top: 2.2cqw;
-  padding: 1cqw 1.7cqw;
-  border-radius: 99px;
-  background: rgba(255, 255, 255, 0.93);
-  color: #0b0e14;
-  font-size: 0.9cqw;
+  font-family: var(--font-display);
+  font-size: 1.45cqw;
   font-weight: 650;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.24em;
+}
+
+.nova__mark {
+  width: 0.9cqw;
+  height: 0.9cqw;
+  border-radius: 0.22cqw;
+  background: linear-gradient(135deg, #7a93ff, #b46bff);
+  box-shadow: 0 0 0.9cqw rgba(140, 100, 255, 0.7);
+  transform: rotate(45deg);
+}
+
+.nova__links {
+  color: rgba(255, 255, 255, 0.56);
+  font-size: 1cqw;
+  letter-spacing: 0.06em;
+}
+
+.nova__navcta {
+  padding: 0.72cqw 1.5cqw;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.78cqw;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
-.alpa__booking {
+.nova__copy {
   position: absolute;
-  top: 50%;
-  right: 3.2cqw;
-  z-index: 2;
-  display: flex;
-  width: 23%;
-  flex-direction: column;
-  gap: 0.9cqw;
-  padding: 1.7cqw;
-  border: 1px solid rgba(255, 255, 255, 0.17);
-  border-radius: 1.1cqw;
-  background: rgba(9, 12, 18, 0.78);
-  -webkit-backdrop-filter: blur(12px);
-  backdrop-filter: blur(12px);
+  top: 47%;
+  left: 5.4%;
+  z-index: 3;
+  width: 64%;
   transform: translateY(-50%);
 }
 
-.alpa__booking-title {
-  margin-bottom: 0.2cqw;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.3cqw;
+.nova__kicker {
+  display: block;
+  margin-bottom: 1.3cqw;
+  color: #c6b3ff;
+  font-size: 0.94cqw;
   font-weight: 550;
-}
-
-.alpa__field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.2cqw;
-  padding-bottom: 0.75cqw;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-}
-
-.alpa__field small {
-  color: rgba(255, 255, 255, 0.47);
-  font-size: 0.72cqw;
-  letter-spacing: 0.04em;
-}
-
-.alpa__field strong {
-  color: rgba(255, 255, 255, 0.85);
-  font-size: 0.95cqw;
-  font-weight: 450;
-}
-
-.alpa__bookbtn {
-  margin-top: 0.25cqw;
-  padding: 0.9cqw;
-  border-radius: 0.45cqw;
-  background: linear-gradient(100deg, #5576ff, #925bff);
-  color: #fff;
-  font-size: 0.82cqw;
-  font-weight: 600;
-  letter-spacing: 0.07em;
-  text-align: center;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
 }
 
-.alpa__foot {
+.nova__copy h3 {
+  font-family: var(--font-display);
+  font-size: 6.6cqw;
+  font-weight: 520;
+  line-height: 0.94;
+  letter-spacing: -0.052em;
+}
+
+.nova__copy h3 span {
+  background: linear-gradient(96deg, #9db0ff 0%, #b78bff 58%, #dc9aff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.nova__copy p {
+  width: 84%;
+  margin-top: 1.5cqw;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 1.32cqw;
+  line-height: 1.55;
+}
+
+.nova__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6cqw;
+  margin-top: 1.9cqw;
+  padding: 0.95cqw 1.6cqw;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #090b12;
+  font-size: 0.78cqw;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.nova__foot {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 3.4cqw;
+  padding: 0 3.6cqw;
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  background: #0b0e14;
-  color: rgba(255, 255, 255, 0.39);
-  font-size: 0.72cqw;
-  letter-spacing: 0.12em;
+  background: rgba(5, 7, 13, 0.5);
+  color: rgba(255, 255, 255, 0.38);
+  font-size: 0.66cqw;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+}
+
+.nova__vignette {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(4, 6, 11, 0.96) 0%,
+      rgba(4, 6, 11, 0.74) 34%,
+      rgba(4, 6, 11, 0.08) 66%,
+      transparent 100%
+    ),
+    linear-gradient(0deg, rgba(4, 6, 11, 0.82) 0%, transparent 32%),
+    radial-gradient(ellipse at 50% 50%, transparent 52%, rgba(2, 4, 8, 0.5) 100%);
+  pointer-events: none;
 }
 
 /* ============================================================
@@ -3259,12 +3410,20 @@ button {
   }
 
   .hero__visual {
-    width: min(100%, 720px);
+    width: min(100%, 680px);
     margin-inline: auto;
   }
 
   .hero-device {
-    padding-bottom: 40px;
+    padding-bottom: 82px;
+  }
+
+  .laptop {
+    transform: rotateX(2deg) rotateY(-16deg) rotateZ(-1.2deg);
+  }
+
+  .hero-device:hover .laptop {
+    transform: rotateX(1deg) rotateY(-11deg) rotateZ(-0.7deg);
   }
 
   .feature-strip {
@@ -3502,15 +3661,15 @@ button {
 
   .hero-device {
     padding-top: 4px;
-    padding-bottom: 34px;
+    padding-bottom: 74px;
   }
 
   .laptop {
-    transform: none;
+    transform: rotateX(2deg) rotateY(-14deg) rotateZ(-1.2deg);
   }
 
   .hero-device:hover .laptop {
-    transform: none;
+    transform: rotateX(1deg) rotateY(-9deg) rotateZ(-0.8deg);
   }
 
   .laptop__lid {
@@ -3521,12 +3680,6 @@ button {
   .laptop__bezel {
     padding: 5px 5px 6px;
     border-radius: 9px;
-  }
-
-  .hero-device__caption {
-    right: 0;
-    bottom: 6px;
-    font-size: 8px;
   }
 
   .feature-section {
@@ -3995,6 +4148,6 @@ button {
   }
 
   .hero-device:hover .laptop {
-    transform: rotateY(-6deg) rotateX(3deg) rotateZ(-1.1deg);
+    transform: rotateX(2.5deg) rotateY(-23deg) rotateZ(-1.8deg);
   }
 }
