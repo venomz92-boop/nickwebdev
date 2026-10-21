@@ -1,0 +1,9 @@
+node_modules
+dist
+dist-archive
+.vite
+*.local
+.dev.vars
+*.tsbuildinfo
+.DS_Store
+Thumbs.db
