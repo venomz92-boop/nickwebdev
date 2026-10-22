@@ -2337,12 +2337,18 @@ button {
 }
 
 .pricing-terms {
-  display: grid;
-  grid-template-columns: minmax(0, 0.75fr) minmax(0, 1.25fr);
-  gap: 74px;
   margin-top: 54px;
   padding-top: 38px;
   border-top: 1px solid var(--border);
+}
+
+.pricing-terms__intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 660px;
+  margin-inline: auto;
+  text-align: center;
 }
 
 .pricing-terms__intro h3 {
@@ -2354,10 +2360,11 @@ button {
 }
 
 .pricing-terms__intro > p:last-child {
-  max-width: 360px;
+  max-width: 540px;
   color: #818a9d;
   font-size: 14px;
   line-height: 1.7;
+  text-wrap: balance;
 }
 
 .pricing-terms__intro .eyebrow {
@@ -2365,16 +2372,20 @@ button {
 }
 
 .pricing-terms__list {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 15px 34px;
+  columns: 2;
+  column-gap: 34px;
+  max-width: 900px;
+  margin: 36px auto 0;
   list-style: none;
+  text-align: left;
 }
 
 .pricing-terms__list li {
   display: flex;
   align-items: flex-start;
   gap: 10px;
+  margin-bottom: 15px;
+  break-inside: avoid;
   color: #9099ad;
   font-size: 13.5px;
   line-height: 1.65;
@@ -3650,8 +3661,7 @@ button {
   }
 
   .pricing-terms {
-    grid-template-columns: 1fr;
-    gap: 30px;
+    margin-top: 46px;
   }
 
   .project {
@@ -3967,7 +3977,7 @@ button {
   }
 
   .pricing-terms__list {
-    grid-template-columns: 1fr;
+    columns: 1;
   }
 
   .portfolio {
