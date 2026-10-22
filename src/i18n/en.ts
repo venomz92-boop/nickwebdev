@@ -104,8 +104,8 @@ export const en = {
         description: "A simple enquiry form connected to your workflow.",
       },
       {
-        title: "Deployment",
-        description: "Your website published online, connected to domain or custom domain and checked before handover.",
+        title: "Launch & Hosting",
+        description: "Your website published online, connected to domain or your own custom domain and checked before handover.",
       },
     ],
     note: "Need something outside this list? Custom databases, booking systems, and payment integrations require a separate assessment.",
