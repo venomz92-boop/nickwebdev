@@ -73,7 +73,7 @@ export const ms: Dictionary = {
       },
       {
         title: "Deployment Boleh Dipercayai",
-        description: "Persediaan deployment halaman.",
+        description: "Persediaan deployment pantas di Cloudflare Pages.",
       },
       {
         title: "Sedia Untuk Perniagaan",
@@ -110,7 +110,7 @@ export const ms: Dictionary = {
       },
       {
         title: "Pelancaran & Pengehosan",
-        description: "Laman web anda diterbitkan dalam talian, disambungkan ke domain atau domain custom anda dan disemak sebelum penyerahan.",
+        description: "Laman web anda diterbitkan dalam talian, disambungkan ke domain custom anda dan disemak sebelum penyerahan.",
       },
     ],
     note: "Perlukan sesuatu di luar senarai ini? Pangkalan data tersuai, sistem tempahan dan integrasi pembayaran memerlukan penilaian berasingan.",
@@ -136,10 +136,10 @@ export const ms: Dictionary = {
           "Laman web satu halaman yang jelas untuk perniagaan yang memerlukan kehadiran dalam talian yang mudah dan profesional.",
         includes: [
           "Laman web satu halaman",
-          "Pengenalan perniagaan, perkhidmatan, foto dan butiran hubungan, sehingga 6 bahagian",
+          "Pengenalan perniagaan, perkhidmatan, foto dan butiran hubungan, sehingga 4 bahagian",
           "Butang WhatsApp dan butang hubungi terus",
           "Berfungsi pada telefon, tablet dan komputer",
-          "Persediaan Google: tajuk halaman, keterangan dan pengindeksan",
+          "Tajuk halaman asas dan penerangan meta",
           "Diterbitkan dalam talian dengan SSL",
           "Satu pusingan perubahan",
           "Teks dan foto disediakan oleh anda",
@@ -156,6 +156,7 @@ export const ms: Dictionary = {
           "Semua dalam Laman Web Ringkas",
           "Sehingga tiga halaman, cth. Utama, Tentang dan Perkhidmatan",
           "Menu navigasi, serta halaman hubungi dengan peta dan waktu operasi",
+          "Persediaan pengindeksan Google Search Console",
           "Butang WhatsApp dan panggilan pada setiap halaman",
           "Dua pusingan perubahan",
         ],
@@ -242,7 +243,7 @@ export const ms: Dictionary = {
         label: "Penyerahan",
         title: "Launch dan Handover",
         description:
-          "Selepas pembayaran akhir, saya menerbitkan laman web yang siap, menyemaknya pada telefon dan komputer sebenar. Menyerahkannya dengan domain yang sudah disambungkan mengikut package yang telah dipersetujui.",
+          "Selepas pembayaran akhir, saya menerbitkan laman web yang siap, menyemaknya pada telefon dan komputer sebenar serta menyerahkannya mengikut pakej yang dipersetujui.",
       },
     ],
   },
@@ -332,7 +333,7 @@ export const ms: Dictionary = {
       {
         question: "Berapa lama masa yang diambil?",
         answer:
-          "Laman Web Ringkas biasanya mengambil masa 3–5 hari bekerja, Laman Web Perniagaan 5–7 hari bekerja, dan Laman Web Perniagaan Plus 7–10 hari bekerja selepas semua kandungan yang diperlukan diterima. Tempoh masa boleh berbeza bergantung pada skop dan maklum balas.",
+          "Laman Web Ringkas biasanya mengambil masa 3–5 hari bekerja, Laman Web Perniagaan 5–7 hari bekerja, dan Laman Web Perniagaan Plus 7–10 hari bekerja selepas semua kandungan yang diterima. Tempoh masa boleh berbeza bergantung pada skop dan maklum balas.",
       },
       {
         question: "Perlukah saya membeli domain?",
