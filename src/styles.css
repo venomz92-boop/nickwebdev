@@ -60,7 +60,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -126,7 +126,7 @@ button {
   border-radius: 8px;
   background: var(--text);
   color: var(--bg);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   transform: translateY(-150%);
   transition: transform 0.2s var(--ease);
@@ -188,7 +188,7 @@ button {
 .section-lede {
   max-width: 430px;
   color: var(--muted);
-  font-size: 15px;
+  font-size: 17px;
   line-height: 1.75;
 }
 
@@ -198,7 +198,7 @@ button {
   gap: 10px;
   margin-bottom: 20px;
   color: #bfc6d6;
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 600;
   line-height: 1.4;
   letter-spacing: 0.17em;
@@ -246,7 +246,7 @@ button {
   padding: 0 24px;
   border: 1px solid transparent;
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 12.5px;
   font-weight: 650;
   line-height: 1;
   letter-spacing: 0.09em;
@@ -307,7 +307,7 @@ button {
 .button--small {
   min-height: 40px;
   padding: 0 16px;
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: 0.1em;
 }
 
@@ -365,7 +365,7 @@ button {
 
 .logo__text {
   font-family: var(--font-display);
-  font-size: 16.5px;
+  font-size: 18px;
   font-weight: 650;
   line-height: 1;
   letter-spacing: -0.025em;
@@ -388,7 +388,7 @@ button {
   position: relative;
   padding: 8px 0;
   color: #aeb5c5;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   letter-spacing: 0.015em;
   transition: color 0.2s var(--ease);
@@ -442,7 +442,7 @@ button {
   background: transparent;
   color: #8b93a6;
   font-family: var(--font-body);
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.09em;
   line-height: 1;
@@ -507,7 +507,7 @@ button {
   padding: 17px 2px;
   border-bottom: 1px solid var(--border);
   font-family: var(--font-display);
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 580;
   letter-spacing: -0.035em;
   opacity: 0;
@@ -526,7 +526,7 @@ button {
 .mobile-menu__note {
   margin-top: 22px;
   color: var(--muted-dark);
-  font-size: 12px;
+  font-size: 14px;
 }
 
 @keyframes menu-in {
@@ -599,7 +599,7 @@ button {
   gap: 10px;
   margin-bottom: 26px;
   color: #c8cedd;
-  font-size: 10.5px;
+  font-size: 12px;
   font-weight: 550;
   letter-spacing: 0.14em;
   line-height: 1.5;
@@ -647,7 +647,7 @@ button {
   max-width: 515px;
   margin-top: 30px;
   color: var(--muted);
-  font-size: 15.5px;
+  font-size: 17.5px;
   line-height: 1.75;
   opacity: 0;
   animation: hero-in 0.8s var(--ease) 0.28s forwards;
@@ -668,7 +668,7 @@ button {
   gap: 7px;
   margin-top: 22px;
   color: #7f8799;
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.5;
   opacity: 0;
   animation: hero-in 0.8s var(--ease) 0.48s forwards;
@@ -1280,7 +1280,7 @@ button {
 
 .feature__title {
   font-family: var(--font-display);
-  font-size: 14.5px;
+  font-size: 16.5px;
   font-weight: 580;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -1289,7 +1289,7 @@ button {
 .feature__description {
   margin-top: 6px;
   color: var(--muted-dark);
-  font-size: 12.5px;
+  font-size: 14.5px;
   line-height: 1.55;
 }
 
@@ -1334,7 +1334,7 @@ button {
 
 .service-row__index {
   color: #596174;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 500;
   letter-spacing: 0.12em;
 }
@@ -1367,7 +1367,7 @@ button {
 
 .service-row__title {
   font-family: var(--font-display);
-  font-size: 15.5px;
+  font-size: 17.5px;
   font-weight: 560;
   line-height: 1.3;
   letter-spacing: -0.015em;
@@ -1375,7 +1375,7 @@ button {
 
 .service-row__description {
   color: #858ea2;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.55;
 }
 
@@ -1398,7 +1398,7 @@ button {
   max-width: 500px;
   margin-top: 22px;
   color: #697186;
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.65;
 }
 
@@ -1615,7 +1615,7 @@ button {
   border-radius: 99px;
   background: rgba(8, 11, 18, 0.74);
   color: #727c91;
-  font-size: 8px;
+  font-size: 9.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   -webkit-backdrop-filter: blur(8px);
@@ -1960,7 +1960,7 @@ button {
   gap: 9px;
   margin-bottom: 24px;
   color: #737c90;
-  font-size: 9.5px;
+  font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
 }
@@ -2073,7 +2073,7 @@ button {
   border-radius: 999px;
   background: rgba(121, 94, 255, 0.1);
   color: #c5bbff;
-  font-size: 8px;
+  font-size: 9.5px;
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -2094,13 +2094,13 @@ button {
 
 .pricing-card__number {
   color: #59637a;
-  font-size: 9px;
+  font-size: 10.5px;
   letter-spacing: 0.12em;
 }
 
 .pricing-card__name {
   font-family: var(--font-display);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 560;
   letter-spacing: -0.01em;
 }
@@ -2115,7 +2115,7 @@ button {
 .pricing-card__currency {
   margin-top: 9px;
   color: #8c95a9;
-  font-size: 11.5px;
+  font-size: 13.5px;
   font-weight: 550;
   letter-spacing: 0.04em;
 }
@@ -2139,7 +2139,7 @@ button {
   min-height: 63px;
   margin-top: 17px;
   color: #929bad;
-  font-size: 12.8px;
+  font-size: 14.5px;
   line-height: 1.65;
 }
 
@@ -2152,7 +2152,7 @@ button {
 .pricing-card__includes-label {
   margin-bottom: 14px;
   color: #697287;
-  font-size: 8.5px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2170,7 +2170,7 @@ button {
   align-items: flex-start;
   gap: 9px;
   color: #b1b9c9;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.45;
 }
 
@@ -2195,7 +2195,7 @@ button {
   padding-top: 22px;
   border-top: 1px solid var(--border);
   color: #8b94a8;
-  font-size: 10.5px;
+  font-size: 12px;
   line-height: 1.55;
 }
 
@@ -2209,7 +2209,7 @@ button {
   display: block;
   margin-bottom: 2px;
   color: #b5bdcf;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2227,7 +2227,7 @@ button {
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.03);
   color: #eef1fa;
-  font-size: 9.5px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -2302,7 +2302,7 @@ button {
   padding-top: 3px;
   padding-left: 13px;
   color: #a8b0ff;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 600;
   letter-spacing: 0.14em;
   line-height: 1.5;
@@ -2324,7 +2324,7 @@ button {
 .pricing-rounds h3 {
   margin-bottom: 8px;
   font-family: var(--font-display);
-  font-size: 19px;
+  font-size: 21px;
   font-weight: 560;
   letter-spacing: -0.025em;
 }
@@ -2332,7 +2332,7 @@ button {
 .pricing-rounds p {
   max-width: 760px;
   color: #969fb2;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -2348,7 +2348,7 @@ button {
 .pricing-terms__intro h3 {
   margin-bottom: 10px;
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 580;
   letter-spacing: -0.025em;
 }
@@ -2356,7 +2356,7 @@ button {
 .pricing-terms__intro > p:last-child {
   max-width: 360px;
   color: #818a9d;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.7;
 }
 
@@ -2376,7 +2376,7 @@ button {
   align-items: flex-start;
   gap: 10px;
   color: #9099ad;
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.65;
 }
 
@@ -2472,7 +2472,7 @@ button {
   border-radius: 99px;
   background: #0b0f17;
   color: #7f899e;
-  font-size: 8.5px;
+  font-size: 10px;
   letter-spacing: 0.03em;
 }
 
@@ -2520,7 +2520,7 @@ button {
   border-radius: 99px;
   background: rgba(8, 11, 18, 0.8);
   color: #eef1fa;
-  font-size: 9px;
+  font-size: 10.5px;
   font-weight: 550;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2555,7 +2555,7 @@ button {
   padding-bottom: 16px;
   border-bottom: 1px solid var(--border);
   color: #697287;
-  font-size: 8.5px;
+  font-size: 10px;
   font-weight: 550;
   letter-spacing: 0.13em;
   text-transform: uppercase;
@@ -2578,7 +2578,7 @@ button {
 .project__description {
   margin-top: 16px;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 15.5px;
   line-height: 1.72;
 }
 
@@ -2595,7 +2595,7 @@ button {
   border: 1px solid #293043;
   border-radius: 99px;
   color: #8c96aa;
-  font-size: 8.5px;
+  font-size: 10px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
@@ -2608,7 +2608,7 @@ button {
   margin-top: auto;
   padding-top: 32px;
   color: #eef1fa;
-  font-size: 9.5px;
+  font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -2637,7 +2637,7 @@ button {
 .project__note {
   margin-top: 17px;
   color: #667086;
-  font-size: 9.5px;
+  font-size: 11px;
   line-height: 1.55;
 }
 
@@ -2674,7 +2674,7 @@ button {
 .process-step__number {
   color: transparent;
   font-family: var(--font-display);
-  font-size: 54px;
+  font-size: 56px;
   font-weight: 620;
   line-height: 0.8;
   letter-spacing: -0.05em;
@@ -2688,7 +2688,7 @@ button {
 .process-step__label {
   padding-top: 3px;
   color: #707a90;
-  font-size: 8.5px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -2716,7 +2716,7 @@ button {
 .process-step h3 {
   max-width: 280px;
   font-family: var(--font-display);
-  font-size: 21px;
+  font-size: 23px;
   font-weight: 560;
   line-height: 1.18;
   letter-spacing: -0.025em;
@@ -2726,7 +2726,7 @@ button {
   max-width: 310px;
   margin-top: 11px;
   color: #8a93a7;
-  font-size: 12.5px;
+  font-size: 14.5px;
   line-height: 1.7;
 }
 
@@ -2839,7 +2839,7 @@ button {
   max-width: 600px;
   margin-top: 13px;
   color: var(--muted);
-  font-size: 13px;
+  font-size: 15px;
   line-height: 1.65;
 }
 
@@ -2853,7 +2853,7 @@ button {
 .contact-cta__actions .button {
   min-height: 46px;
   padding: 0 19px;
-  font-size: 9.5px;
+  font-size: 11px;
 }
 
 .contact__layout {
@@ -2883,7 +2883,7 @@ button {
   max-width: 410px;
   margin-top: 19px;
   color: var(--muted);
-  font-size: 13.5px;
+  font-size: 15.5px;
   line-height: 1.75;
 }
 
@@ -2900,7 +2900,7 @@ button {
   align-items: center;
   gap: 9px;
   color: #aab2c4;
-  font-size: 11.5px;
+  font-size: 13.5px;
 }
 
 .contact__assurances svg {
@@ -2919,7 +2919,7 @@ button {
   padding: 14px 0;
   border-bottom: 1px solid var(--border);
   color: #7e879a;
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.5;
 }
 
@@ -2931,7 +2931,7 @@ button {
   display: block;
   margin-bottom: 1px;
   color: #d9deea;
-  font-size: 11.5px;
+  font-size: 13.5px;
   font-weight: 550;
 }
 
@@ -2969,13 +2969,13 @@ button {
   padding-left: 11px;
   border-left: 1px solid #394158;
   color: #687287;
-  font-size: 10px;
+  font-size: 11.5px;
   line-height: 1.6;
 }
 
 .contact__config-note code {
   color: #99a4be;
-  font-size: 10px;
+  font-size: 11.5px;
 }
 
 .enquiry-form {
@@ -3017,7 +3017,7 @@ button {
   display: block;
   margin-bottom: 7px;
   color: #798399;
-  font-size: 8.5px;
+  font-size: 10px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -3025,7 +3025,7 @@ button {
 
 .enquiry-form__header h3 {
   font-family: var(--font-display);
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 570;
   line-height: 1.1;
   letter-spacing: -0.03em;
@@ -3033,7 +3033,7 @@ button {
 
 .enquiry-form__step {
   color: #5f687d;
-  font-size: 8.5px;
+  font-size: 10px;
   letter-spacing: 0.12em;
   white-space: nowrap;
 }
@@ -3057,7 +3057,7 @@ button {
 
 .form-field label {
   color: #aeb6c8;
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 550;
   letter-spacing: 0.06em;
 }
@@ -3081,7 +3081,7 @@ button {
   outline: none;
   background: #090d15;
   color: var(--text);
-  font-size: 13px;
+  font-size: 15px;
   transition:
     border-color 0.22s var(--ease),
     box-shadow 0.22s var(--ease),
@@ -3128,18 +3128,18 @@ button {
 }
 
 .form-field__optional {
-  font-size: 9px;
+  font-size: 10.5px;
 }
 
 .form-field__error {
   color: #ff8b9b;
-  font-size: 10px;
+  font-size: 11.5px;
   line-height: 1.45;
 }
 
 .form-field__hint {
   color: #626c80;
-  font-size: 9.5px;
+  font-size: 11px;
   line-height: 1.5;
 }
 
@@ -3181,7 +3181,7 @@ button {
 .enquiry-form__submit {
   min-width: 228px;
   min-height: 48px;
-  font-size: 9.5px;
+  font-size: 11px;
 }
 
 .enquiry-form__submit:hover svg {
@@ -3191,7 +3191,7 @@ button {
 .enquiry-form__footer > p {
   max-width: 290px;
   color: #687286;
-  font-size: 9.5px;
+  font-size: 11px;
   line-height: 1.55;
 }
 
@@ -3202,14 +3202,14 @@ button {
   margin-top: 18px;
   padding: 13px 14px;
   border-radius: 9px;
-  font-size: 11.5px;
+  font-size: 13.5px;
   line-height: 1.55;
 }
 
 .form-status__box strong {
   display: block;
   margin-bottom: 2px;
-  font-size: 11.5px;
+  font-size: 13.5px;
   font-weight: 600;
 }
 
@@ -3244,7 +3244,7 @@ button {
   place-items: center;
   border: 1px solid rgba(240, 160, 172, 0.5);
   border-radius: 50%;
-  font-size: 10px;
+  font-size: 11.5px;
   font-weight: 700;
 }
 
@@ -3276,7 +3276,7 @@ button {
 
 .faq__intro .section-lede {
   margin-top: 19px;
-  font-size: 13.5px;
+  font-size: 15.5px;
 }
 
 .faq__contact {
@@ -3285,7 +3285,7 @@ button {
   gap: 10px;
   margin-top: 30px;
   color: #c3cadb;
-  font-size: 10.5px;
+  font-size: 12px;
   letter-spacing: 0.02em;
 }
 
@@ -3337,13 +3337,13 @@ button {
 
 .faq-item__index {
   color: #596278;
-  font-size: 8.5px;
+  font-size: 10px;
   letter-spacing: 0.12em;
 }
 
 .faq-item__question {
   font-family: var(--font-display);
-  font-size: 15.5px;
+  font-size: 17.5px;
   font-weight: 530;
   line-height: 1.4;
   letter-spacing: -0.015em;
@@ -3383,7 +3383,7 @@ button {
 .faq-item__panel p {
   max-width: 640px;
   color: #9099ad;
-  font-size: 12.5px;
+  font-size: 14.5px;
   line-height: 1.75;
 }
 
@@ -3408,7 +3408,7 @@ button {
 .footer__brand p {
   margin-top: 14px;
   color: #7f889c;
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .footer__nav {
@@ -3420,7 +3420,7 @@ button {
 
 .footer__nav a {
   color: #9da5b7;
-  font-size: 11.5px;
+  font-size: 13.5px;
   transition: color 0.2s var(--ease);
 }
 
@@ -3440,7 +3440,7 @@ button {
 
 .footer__copyright {
   color: #626b7f;
-  font-size: 10px;
+  font-size: 11.5px;
 }
 
 .footer__links {
@@ -3455,7 +3455,7 @@ button {
   align-items: center;
   gap: 5px;
   color: #828ca0;
-  font-size: 10px;
+  font-size: 11.5px;
   transition: color 0.2s var(--ease);
 }
 
@@ -3468,7 +3468,7 @@ button {
   align-items: center;
   gap: 6px;
   color: #828ca0;
-  font-size: 10px;
+  font-size: 11.5px;
   transition: color 0.2s var(--ease);
 }
 
@@ -3745,7 +3745,7 @@ button {
   }
 
   .logo__text {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .logo svg {
@@ -3784,7 +3784,7 @@ button {
   }
 
   .section-lede {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .hero {
@@ -3799,12 +3799,12 @@ button {
 
   .hero__eyebrow {
     margin-bottom: 20px;
-    font-size: 9.5px;
+    font-size: 11px;
   }
 
   .hero__lede {
     margin-top: 25px;
-    font-size: 14.5px;
+    font-size: 16.5px;
   }
 
   .hero__actions {
@@ -3812,7 +3812,7 @@ button {
   }
 
   .hero__note {
-    font-size: 10.5px;
+    font-size: 12px;
   }
 
   .hero-device {
@@ -3858,11 +3858,11 @@ button {
   }
 
   .feature__title {
-    font-size: 13.5px;
+    font-size: 15.5px;
   }
 
   .feature__description {
-    font-size: 11.5px;
+    font-size: 13.5px;
   }
 
   .services {
@@ -3886,11 +3886,11 @@ button {
   }
 
   .service-row__title {
-    font-size: 14.5px;
+    font-size: 16.5px;
   }
 
   .service-row__description {
-    font-size: 11.5px;
+    font-size: 13.5px;
   }
 
   .service-row:hover {
@@ -3958,7 +3958,7 @@ button {
   }
 
   .pricing-rounds h3 {
-    font-size: 17px;
+    font-size: 18.5px;
   }
 
   .pricing-terms {
@@ -4005,7 +4005,7 @@ button {
   }
 
   .project__description {
-    font-size: 12.5px;
+    font-size: 14.5px;
   }
 
   .project__link {
@@ -4030,7 +4030,7 @@ button {
   }
 
   .process-step__number {
-    font-size: 48px;
+    font-size: 50px;
   }
 
   .process-step__rule {
@@ -4039,7 +4039,7 @@ button {
 
   .process-step h3 {
     max-width: 320px;
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .process-step p {
@@ -4080,7 +4080,7 @@ button {
 
   .contact-cta__lede {
     margin-inline: auto;
-    font-size: 12.5px;
+    font-size: 14.5px;
   }
 
   .contact-cta__actions {
@@ -4114,7 +4114,7 @@ button {
   }
 
   .enquiry-form__header h3 {
-    font-size: 21px;
+    font-size: 23px;
   }
 
   .enquiry-form__grid {
@@ -4154,7 +4154,7 @@ button {
   }
 
   .faq-item__question {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .faq-item__panel {
@@ -4162,7 +4162,7 @@ button {
   }
 
   .faq-item__panel p {
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .footer {
@@ -4278,7 +4278,7 @@ button {
   }
 
   .footer__links a {
-    font-size: 9.5px;
+    font-size: 11px;
   }
 }
 
@@ -4288,7 +4288,7 @@ button {
   }
 
   .logo__text {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .lang-switch__option {
@@ -4307,7 +4307,7 @@ button {
   }
 
   .pricing-card__name {
-    font-size: 14px;
+    font-size: 16px;
   }
 }
 
