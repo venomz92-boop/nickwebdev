@@ -1,4 +1,5 @@
 import { useId, type SVGProps } from "react";
+import { useI18n } from "../i18n";
 
 export function LogoMark({ size = 36, ...props }: SVGProps<SVGSVGElement> & { size?: number }) {
   const gradientId = `logo-gradient-${useId().replace(/:/g, "")}`;
@@ -42,8 +43,10 @@ export function LogoMark({ size = 36, ...props }: SVGProps<SVGSVGElement> & { si
 }
 
 export function Logo({ compact = false }: { compact?: boolean }) {
+  const { t } = useI18n();
+
   return (
-    <a className="logo" href="#top" aria-label="Nick's WebDev — back to top">
+    <a className="logo" href="#top" aria-label={t.logo.label}>
       <LogoMark size={compact ? 32 : 36} />
       <span className="logo__text">
         Nick's <span>WebDev</span>

@@ -1,16 +1,19 @@
 import { useEffect, useRef, useState } from "react";
+import { useI18n } from "../i18n";
 import { ArrowUpRight, Close, Menu } from "./Icons";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 import { Logo } from "./Logo";
 
 const navItems = [
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-];
+  { key: "services", href: "#services" },
+  { key: "pricing", href: "#pricing" },
+  { key: "portfolio", href: "#portfolio" },
+  { key: "faq", href: "#faq" },
+  { key: "contact", href: "#contact" },
+] as const;
 
 export function Header() {
+  const { t } = useI18n();
   const [open, setOpen] = useState(false);
   const toggleRef = useRef<HTMLButtonElement>(null);
 
@@ -54,17 +57,18 @@ export function Header() {
         <div className="container site-header__inner">
           <Logo />
 
-          <nav className="desktop-nav" aria-label="Primary navigation">
+          <nav className="desktop-nav" aria-label={t.nav.primary}>
             {navItems.map((item) => (
               <a key={item.href} href={item.href}>
-                {item.label}
+                {t.nav.items[item.key]}
               </a>
             ))}
           </nav>
 
           <div className="site-header__actions">
+            <LanguageSwitcher />
             <a className="button button--small button--header" href="#contact">
-              Start a project
+              {t.header.cta}
               <ArrowUpRight size={16} />
             </a>
             <button
@@ -73,7 +77,7 @@ export function Header() {
               type="button"
               aria-expanded={open}
               aria-controls="mobile-menu"
-              aria-label={open ? "Close navigation menu" : "Open navigation menu"}
+              aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
               onClick={() => setOpen((current) => !current)}
             >
               {open ? <Close size={22} /> : <Menu size={22} />}
@@ -84,7 +88,7 @@ export function Header() {
 
       {open && (
         <div className="mobile-menu" id="mobile-menu">
-          <nav className="mobile-menu__nav" aria-label="Mobile navigation">
+          <nav className="mobile-menu__nav" aria-label={t.nav.mobile}>
             {navItems.map((item, index) => (
               <a
                 key={item.href}
@@ -92,7 +96,7 @@ export function Header() {
                 onClick={() => setOpen(false)}
                 style={{ animationDelay: `${index * 35}ms` }}
               >
-                <span>{item.label}</span>
+                <span>{t.nav.items[item.key]}</span>
                 <ArrowUpRight size={18} />
               </a>
             ))}
@@ -102,10 +106,10 @@ export function Header() {
             href="#contact"
             onClick={() => setOpen(false)}
           >
-            Start a project
+            {t.header.cta}
             <ArrowUpRight size={17} />
           </a>
-          <p className="mobile-menu__note">Professional websites. Built for growing businesses.</p>
+          <p className="mobile-menu__note">{t.header.note}</p>
         </div>
       )}
     </>

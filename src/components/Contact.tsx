@@ -2,11 +2,15 @@ import { useEffect, useState, type MouseEvent } from "react";
 import {
   buildWhatsAppHref,
   contactEmailHref,
+  defaultPackageOption,
+  isPackageOption,
   packageOptions,
   siteConfig,
-  whatsappHref,
+  websitePackages,
   type PackageOption,
 } from "../config";
+import { useI18n } from "../i18n";
+import type { Dictionary } from "../i18n/en";
 import {
   ArrowUpRight,
   Check,
@@ -30,41 +34,51 @@ type Status = { type: "idle" } | { type: "opened" } | { type: "config-error" };
 const initialValues: FormValues = {
   name: "",
   business: "",
-  package: "Not Sure Yet",
+  package: defaultPackageOption,
   description: "",
 };
 
-function validate(values: FormValues): FormErrors {
+/** Visible label for a package, e.g. "Laman Web Ringkas – RM399". */
+function packageLabel(option: PackageOption, t: Dictionary): string {
+  if (option === "unsure") return t.contact.form.packageUnsure;
+
+  const registered = websitePackages.find((item) => item.id === option);
+  const name = t.pricing.packages[option].name;
+
+  return registered ? `${name} – ${registered.price}` : name;
+}
+
+function validate(values: FormValues, t: Dictionary): FormErrors {
   const errors: FormErrors = {};
 
   if (values.name.trim().length < 2) {
-    errors.name = "Please enter your name.";
+    errors.name = t.contact.errors.name;
   }
   if (!values.package) {
-    errors.package = "Please choose a package.";
+    errors.package = t.contact.errors.package;
   }
   if (values.description.trim().length < 10) {
-    errors.description = "Please share a little more about your project.";
+    errors.description = t.contact.errors.description;
   }
 
   return errors;
 }
 
-function buildEnquiryMessage(values: FormValues): string {
+function buildEnquiryMessage(values: FormValues, t: Dictionary): string {
   const lines = [
-    "Hi Nick, I'd like to discuss a website project.",
+    t.contact.enquiry.greeting,
     "",
-    `Name: ${values.name.trim()}`,
+    `${t.contact.enquiry.name}: ${values.name.trim()}`,
   ];
 
   if (values.business.trim()) {
-    lines.push(`Business: ${values.business.trim()}`);
+    lines.push(`${t.contact.enquiry.business}: ${values.business.trim()}`);
   }
 
   lines.push(
-    `Package: ${values.package === "Not Sure Yet" ? "Not sure yet" : values.package}`,
+    `${t.contact.enquiry.package}: ${packageLabel(values.package, t)}`,
     "",
-    "Project details:",
+    `${t.contact.enquiry.details}:`,
     values.description.trim(),
   );
 
@@ -77,6 +91,7 @@ type ContactProps = {
 };
 
 export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
+  const { t } = useI18n();
   const [values, setValues] = useState<FormValues>({
     ...initialValues,
     package: selectedPackage,
@@ -94,7 +109,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
   const updateField = <K extends keyof FormValues>(field: K, value: FormValues[K]) => {
     setValues((current) => ({ ...current, [field]: value }));
     if (touched[field]) {
-      const nextErrors = validate({ ...values, [field]: value });
+      const nextErrors = validate({ ...values, [field]: value }, t);
       setErrors((current) => ({ ...current, [field]: nextErrors[field] }));
     }
     if (status.type !== "idle") {
@@ -104,20 +119,19 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
 
   const handleBlur = (field: keyof FormValues) => {
     setTouched((current) => ({ ...current, [field]: true }));
-    const nextErrors = validate(values);
+    const nextErrors = validate(values, t);
     setErrors((current) => ({ ...current, [field]: nextErrors[field] }));
   };
 
   const handlePackageChange = (value: string) => {
-    const option = packageOptions.includes(value as PackageOption)
-      ? (value as PackageOption)
-      : "Not Sure Yet";
+    const option = isPackageOption(value) ? value : defaultPackageOption;
     updateField("package", option);
     onPackageChange(option);
   };
 
-  const enquiryHref = buildWhatsAppHref(buildEnquiryMessage(values));
-  const isComplete = Object.keys(validate(values)).length === 0;
+  const enquiryHref = buildWhatsAppHref(buildEnquiryMessage(values, t));
+  const whatsappHref = buildWhatsAppHref(t.contact.enquiry.greeting);
+  const isComplete = Object.keys(validate(values, t)).length === 0;
   const actionHref = isComplete && enquiryHref ? enquiryHref : "#contact";
 
   const handleWhatsAppClick = (event: MouseEvent<HTMLAnchorElement>) => {
@@ -127,7 +141,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
       return;
     }
 
-    const nextErrors = validate(values);
+    const nextErrors = validate(values, t);
     if (Object.keys(nextErrors).length > 0) {
       event.preventDefault();
       setErrors(nextErrors);
@@ -161,21 +175,18 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
           <div className="contact-cta__content">
             <p className="eyebrow">
               <span className="eyebrow__dot" aria-hidden="true" />
-              Ready to get started?
+              {t.contact.cta.eyebrow}
             </p>
             <h2 className="contact-cta__title" id="contact-title">
-              Let's build something{" "}
-              <span className="text-gradient">great together</span>
+              {t.contact.cta.titleLead}{" "}
+              <span className="text-gradient">{t.contact.cta.titleAccent}</span>
             </h2>
-            <p className="contact-cta__lede">
-              Have a business idea or need a website? Tell me what you have in mind,
-              and let's discuss the right solution for your business.
-            </p>
+            <p className="contact-cta__lede">{t.contact.cta.lede}</p>
           </div>
 
           <div className="contact-cta__actions">
             <a className="button button--primary" href="#contact-form">
-              Start a project
+              {t.contact.cta.primary}
               <ArrowUpRight size={18} />
             </a>
             <a
@@ -185,17 +196,17 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
               rel={whatsappHref ? "noopener noreferrer" : undefined}
               aria-label={
                 whatsappHref
-                  ? "Contact Nick's WebDev on WhatsApp"
-                  : "Go to the project enquiry section"
+                  ? t.contact.cta.whatsappLabel
+                  : t.contact.cta.whatsappFallbackLabel
               }
               title={
                 whatsappHref
-                  ? "Chat on WhatsApp"
-                  : "Use the project enquiry form to build a WhatsApp message."
+                  ? t.contact.cta.whatsappTitle
+                  : t.contact.cta.whatsappFallbackTitle
               }
             >
               <WhatsApp size={17} />
-              Contact on WhatsApp
+              {t.contact.cta.whatsapp}
             </a>
           </div>
         </Reveal>
@@ -204,30 +215,21 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
           <Reveal className="contact__intro">
             <p className="eyebrow">
               <span className="eyebrow__dot" aria-hidden="true" />
-              Start a conversation
+              {t.contact.intro.eyebrow}
             </p>
             <h2 className="contact__title">
-              Tell me what you have <span className="text-gradient">in mind.</span>
+              {t.contact.intro.titleLead}{" "}
+              <span className="text-gradient">{t.contact.intro.titleAccent}</span>
             </h2>
-            <p className="contact__lede">
-              Share a few details about your business and the website you need. Your
-              answers become a ready-to-send WhatsApp message — nothing is sent until
-              you press send.
-            </p>
+            <p className="contact__lede">{t.contact.intro.lede}</p>
 
             <ul className="contact__assurances">
-              <li>
-                <Check size={14} />
-                Clear scope before work begins
-              </li>
-              <li>
-                <Check size={14} />
-                Straightforward communication on WhatsApp
-              </li>
-              <li>
-                <Check size={14} />
-                No payment details needed to start
-              </li>
+              {t.contact.intro.assurances.map((assurance) => (
+                <li key={assurance}>
+                  <Check size={14} />
+                  {assurance}
+                </li>
+              ))}
             </ul>
 
             <div className="contact__details">
@@ -236,8 +238,8 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                   <MapPin size={17} />
                 </span>
                 <span>
-                  <strong>Based in Malaysia</strong>
-                  Working with businesses across the country.
+                  <strong>{t.contact.intro.locationLabel}</strong>
+                  {t.contact.intro.locationNote}
                 </span>
               </div>
 
@@ -252,7 +254,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                     <WhatsApp size={17} />
                   </span>
                   <span>
-                    <strong>WhatsApp</strong>
+                    <strong>{t.contact.intro.whatsappLabel}</strong>
                     {siteConfig.whatsappDisplay}
                   </span>
                   <ArrowUpRight size={16} />
@@ -265,7 +267,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                     <Mail size={17} />
                   </span>
                   <span>
-                    <strong>Email</strong>
+                    <strong>{t.contact.intro.emailLabel}</strong>
                     {siteConfig.email}
                   </span>
                   <ArrowUpRight size={16} />
@@ -275,8 +277,8 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
 
             {import.meta.env.DEV && !whatsappHref && !contactEmailHref && (
               <p className="contact__config-note">
-                Developer note: add a WhatsApp number in <code>src/config.ts</code> to
-                enable the WhatsApp enquiry.
+                {t.contact.intro.configNote.lead} <code>src/config.ts</code>{" "}
+                {t.contact.intro.configNote.tail}
               </p>
             )}
           </Reveal>
@@ -290,16 +292,16 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
             >
               <div className="enquiry-form__header">
                 <div>
-                  <span className="enquiry-form__label">Project enquiry</span>
-                  <h3 id="enquiry-form-title">Let's start with the basics.</h3>
+                  <span className="enquiry-form__label">{t.contact.form.label}</span>
+                  <h3 id="enquiry-form-title">{t.contact.form.title}</h3>
                 </div>
-                <span className="enquiry-form__step">VIA WHATSAPP</span>
+                <span className="enquiry-form__step">{t.contact.form.via}</span>
               </div>
 
               <div className="enquiry-form__grid">
                 <div className="form-field">
                   <label htmlFor="name">
-                    Name <span aria-hidden="true">*</span>
+                    {t.contact.form.name} <span aria-hidden="true">*</span>
                   </label>
                   <input
                     id="name"
@@ -312,7 +314,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                     onBlur={() => handleBlur("name")}
                     aria-invalid={Boolean(fieldError("name"))}
                     aria-describedby={fieldError("name") ? "name-error" : undefined}
-                    placeholder="Your name"
+                    placeholder={t.contact.form.namePlaceholder}
                   />
                   {fieldError("name") && (
                     <span className="form-field__error" id="name-error">
@@ -323,8 +325,10 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
 
                 <div className="form-field">
                   <label htmlFor="business">
-                    Business name{" "}
-                    <span className="form-field__optional">(optional)</span>
+                    {t.contact.form.business}{" "}
+                    <span className="form-field__optional">
+                      {t.contact.form.optional}
+                    </span>
                   </label>
                   <input
                     id="business"
@@ -333,13 +337,13 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                     autoComplete="organization"
                     value={values.business}
                     onChange={(event) => updateField("business", event.target.value)}
-                    placeholder="Your business"
+                    placeholder={t.contact.form.businessPlaceholder}
                   />
                 </div>
 
                 <div className="form-field form-field--full">
                   <label htmlFor="package">
-                    Website package <span aria-hidden="true">*</span>
+                    {t.contact.form.package} <span aria-hidden="true">*</span>
                   </label>
                   <div className="select-wrap">
                     <select
@@ -356,7 +360,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                     >
                       {packageOptions.map((option) => (
                         <option key={option} value={option}>
-                          {option}
+                          {packageLabel(option, t)}
                         </option>
                       ))}
                     </select>
@@ -370,7 +374,7 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
 
                 <div className="form-field form-field--full">
                   <label htmlFor="description">
-                    Project description <span aria-hidden="true">*</span>
+                    {t.contact.form.description} <span aria-hidden="true">*</span>
                   </label>
                   <textarea
                     id="description"
@@ -386,10 +390,10 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                         ? "description-error"
                         : "description-hint"
                     }
-                    placeholder="What does your business do, and what would you like your website to help with?"
+                    placeholder={t.contact.form.descriptionPlaceholder}
                   />
                   <span className="form-field__hint" id="description-hint">
-                    A few sentences is enough to get started.
+                    {t.contact.form.descriptionHint}
                   </span>
                   {fieldError("description") && (
                     <span className="form-field__error" id="description-error">
@@ -409,12 +413,9 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                   aria-describedby="enquiry-form-note"
                 >
                   <WhatsApp size={17} />
-                  Continue on WhatsApp
+                  {t.contact.form.submit}
                 </a>
-                <p id="enquiry-form-note">
-                  Your message opens in WhatsApp for you to review before sending. You
-                  can change or cancel it there.
-                </p>
+                <p id="enquiry-form-note">{t.contact.form.submitNote}</p>
               </div>
 
               <div className="form-status" aria-live="polite">
@@ -422,11 +423,8 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                   <div className="form-status__box form-status__box--info">
                     <WhatsApp size={17} />
                     <div>
-                      <strong>WhatsApp is opening in a new tab.</strong>
-                      <p>
-                        Check the message, then press send. Your enquiry is only sent
-                        once you do.
-                      </p>
+                      <strong>{t.contact.form.openedTitle}</strong>
+                      <p>{t.contact.form.openedBody}</p>
                     </div>
                   </div>
                 )}
@@ -434,11 +432,8 @@ export function Contact({ selectedPackage, onPackageChange }: ContactProps) {
                   <div className="form-status__box form-status__box--error" role="alert">
                     <span className="form-status__error-mark" aria-hidden="true">!</span>
                     <div>
-                      <strong>WhatsApp is not available right now.</strong>
-                      <p>
-                        No message was opened. Please try again later or use the contact
-                        details on this page.
-                      </p>
+                      <strong>{t.contact.form.errorTitle}</strong>
+                      <p>{t.contact.form.errorBody}</p>
                     </div>
                   </div>
                 )}

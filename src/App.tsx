@@ -9,10 +9,13 @@ import { Portfolio } from "./components/Portfolio";
 import { Pricing } from "./components/Pricing";
 import { Process } from "./components/Process";
 import { Services } from "./components/Services";
-import type { PackageOption } from "./config";
+import { defaultPackageOption, type PackageOption } from "./config";
+import { useI18n } from "./i18n";
 
 export default function App() {
-  const [selectedPackage, setSelectedPackage] = useState<PackageOption>("Not Sure Yet");
+  const { t } = useI18n();
+  const [selectedPackage, setSelectedPackage] =
+    useState<PackageOption>(defaultPackageOption);
 
   const handleSelectPackage = (option: PackageOption) => {
     setSelectedPackage(option);
@@ -42,7 +45,7 @@ export default function App() {
   return (
     <>
       <a className="skip-link" href="#main-content">
-        Skip to content
+        {t.common.skipToContent}
       </a>
       <Header />
       <main id="main-content">

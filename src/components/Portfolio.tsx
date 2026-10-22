@@ -1,25 +1,30 @@
 import kundasangPreview from "../assets/kundasang-preview.jpg";
+import { useI18n } from "../i18n";
 import { ArrowUpRight, Globe } from "./Icons";
 import { Reveal } from "./Reveal";
 
 export function Portfolio() {
+  const { t } = useI18n();
+
   return (
-    <section className="section portfolio" id="portfolio" aria-labelledby="portfolio-title">
+    <section
+      className="section portfolio"
+      id="portfolio"
+      aria-labelledby="portfolio-title"
+    >
       <div className="container">
         <Reveal className="section-head section-head--split">
           <div>
             <p className="eyebrow">
               <span className="eyebrow__dot" aria-hidden="true" />
-              Selected work
+              {t.portfolio.eyebrow}
             </p>
             <h2 className="section-title" id="portfolio-title">
-              Built with <span className="text-gradient">Purpose</span>
+              {t.portfolio.titleLead}{" "}
+              <span className="text-gradient">{t.portfolio.titleAccent}</span>
             </h2>
           </div>
-          <p className="section-lede">
-            Explore my work and see how modern web design can help businesses present
-            themselves online.
-          </p>
+          <p className="section-lede">{t.portfolio.lede}</p>
         </Reveal>
 
         <Reveal className="project" as="article">
@@ -28,7 +33,7 @@ export function Portfolio() {
             href="https://kundasanghomestay.my"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Visit KundasangHomestay.my in a new tab"
+            aria-label={t.portfolio.previewLabel}
           >
             <div className="project__browserbar" aria-hidden="true">
               <span className="project__browser-dots">
@@ -47,13 +52,13 @@ export function Portfolio() {
             <div className="project__image-wrap">
               <img
                 src={kundasangPreview}
-                alt="Homepage of KundasangHomestay.my showing a Mount Kinabalu landscape, the headline 'Cozy, verified properties in Kundasang & Ranau', and a search panel."
+                alt={t.portfolio.imageAlt}
                 loading="lazy"
                 width="1281"
                 height="886"
               />
               <span className="project__preview-overlay">
-                <span>Visit website</span>
+                <span>{t.portfolio.visit}</span>
                 <ArrowUpRight size={20} />
               </span>
             </div>
@@ -61,18 +66,15 @@ export function Portfolio() {
 
           <div className="project__body">
             <div className="project__meta">
-              <span>Project 01</span>
-              <span>Personal project</span>
+              <span>{t.portfolio.projectNumber}</span>
+              <span>{t.portfolio.projectType}</span>
             </div>
-            <h3 className="project__title">KundasangHomestay.my</h3>
-            <p className="project__description">
-              A homestay-related web project demonstrating my experience with website
-              development, deployment, and presenting business information online.
-            </p>
-            <ul className="project__tags" aria-label="Project disciplines">
-              <li>Website development</li>
-              <li>Deployment</li>
-              <li>Online business information</li>
+            <h3 className="project__title">{t.portfolio.projectTitle}</h3>
+            <p className="project__description">{t.portfolio.description}</p>
+            <ul className="project__tags" aria-label={t.portfolio.tagsLabel}>
+              {t.portfolio.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
             </ul>
             <a
               className="project__link"
@@ -80,14 +82,12 @@ export function Portfolio() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit website
+              {t.portfolio.visit}
               <span className="project__link-icon">
                 <ArrowUpRight size={17} />
               </span>
             </a>
-            <p className="project__note">
-              A live personal project, shown as an example of my work.
-            </p>
+            <p className="project__note">{t.portfolio.note}</p>
           </div>
         </Reveal>
       </div>

@@ -2,13 +2,9 @@ import { ArrowUpRight } from "./Icons";
 
 const keyboardRows = Array.from({ length: 6 });
 
-export function HeroLaptop() {
+export function HeroLaptop({ label }: { label: string }) {
   return (
-    <div
-      className="hero-device"
-      role="img"
-      aria-label="An angled laptop showing an example website for a fictional digital studio, with a dark violet abstract backdrop, editorial headline, and a keyboard lit by a soft purple glow."
-    >
+    <div className="hero-device" role="img" aria-label={label}>
       <div className="hero-device__grid" aria-hidden="true" />
       <div className="hero-device__aura" aria-hidden="true" />
       <div className="hero-device__arc" aria-hidden="true" />

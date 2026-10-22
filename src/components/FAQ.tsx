@@ -1,51 +1,11 @@
 import { useRef, useState, type KeyboardEvent } from "react";
+import { useI18n } from "../i18n";
 import { ArrowUpRight, Plus } from "./Icons";
 import { Reveal } from "./Reveal";
 
-const faqs = [
-  {
-    question: "How much does a website cost?",
-    answer:
-      "My packages start at RM399 for a simple one-page website, RM799 for a business website with up to three pages, and RM1,299 for Business Website Plus with up to five pages.",
-  },
-  {
-    question: "How long does it take?",
-    answer:
-      "A Simple Website usually takes 3–5 working days, a Business Website 5–7 working days, and Business Website Plus 7–10 working days after all required content is received. Timelines may vary with scope and feedback.",
-  },
-  {
-    question: "Do I need to buy a domain?",
-    answer:
-      "Domain registration is separate. I can help explain the setup, and domain costs depend on the domain provider and extension.",
-  },
-  {
-    question: "Can you add a booking system or online payments?",
-    answer:
-      "These features require separate technical assessment and quotation. They are not included in the standard packages.",
-  },
-  {
-    question: "Can you modify my existing website?",
-    answer:
-      "My standard packages focus on new website creation. Changes to an existing website depend on its platform, access permissions, source code, and technical requirements.",
-  },
-  {
-    question: "Do you provide ongoing maintenance?",
-    answer:
-      "Additional updates may be available by agreement. Ongoing maintenance and technical troubleshooting are not automatically included in the website packages.",
-  },
-  {
-    question: "What do I need to prepare?",
-    answer:
-      "Please prepare your business details, services, contact information, and any text or images you would like included.",
-  },
-  {
-    question: "What are your payment terms?",
-    answer:
-      "A 50% deposit is required to begin work, with the remaining 50% due before final handover.",
-  },
-];
-
 export function FAQ() {
+  const { t } = useI18n();
+  const faqs = t.faq.items;
   const [openIndex, setOpenIndex] = useState<number | null>(0);
   const buttonRefs = useRef<Array<HTMLButtonElement | null>>([]);
 
@@ -69,17 +29,15 @@ export function FAQ() {
         <Reveal className="faq__intro">
           <p className="eyebrow">
             <span className="eyebrow__dot" aria-hidden="true" />
-            Frequently asked
+            {t.faq.eyebrow}
           </p>
           <h2 className="section-title" id="faq-title">
-            Questions, <span className="text-gradient">answered.</span>
+            {t.faq.titleLead}{" "}
+            <span className="text-gradient">{t.faq.titleAccent}</span>
           </h2>
-          <p className="section-lede">
-            The practical details about packages, timelines, and what to expect when
-            working together.
-          </p>
+          <p className="section-lede">{t.faq.lede}</p>
           <a className="faq__contact" href="#contact-form">
-            Still have a question? Start a conversation
+            {t.faq.contact}
             <span>
               <ArrowUpRight size={16} />
             </span>

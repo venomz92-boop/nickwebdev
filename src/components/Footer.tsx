@@ -1,17 +1,20 @@
-import { contactEmailHref, siteConfig, whatsappHref } from "../config";
+import { buildWhatsAppHref, contactEmailHref } from "../config";
+import { useI18n } from "../i18n";
 import { ArrowUpRight, Mail, WhatsApp } from "./Icons";
 import { Logo } from "./Logo";
 
-const footerLinks = [
-  { label: "Services", href: "#services" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
-];
+const footerNavItems = [
+  { key: "services", href: "#services" },
+  { key: "pricing", href: "#pricing" },
+  { key: "portfolio", href: "#portfolio" },
+  { key: "faq", href: "#faq" },
+  { key: "contact", href: "#contact" },
+] as const;
 
 export function Footer() {
+  const { t } = useI18n();
   const year = new Date().getFullYear();
+  const whatsappHref = buildWhatsAppHref(t.contact.enquiry.greeting);
 
   return (
     <footer className="footer">
@@ -19,13 +22,13 @@ export function Footer() {
         <div className="footer__top">
           <div className="footer__brand">
             <Logo compact />
-            <p>{siteConfig.tagline}</p>
+            <p>{t.footer.tagline}</p>
           </div>
 
-          <nav className="footer__nav" aria-label="Footer navigation">
-            {footerLinks.map((link) => (
+          <nav className="footer__nav" aria-label={t.nav.footer}>
+            {footerNavItems.map((link) => (
               <a key={link.href} href={link.href}>
-                {link.label}
+                {t.nav.items[link.key]}
               </a>
             ))}
           </nav>
@@ -33,7 +36,7 @@ export function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © {year} Nick's WebDev. All rights reserved.
+            {t.footer.copyright.replace("{year}", String(year))}
           </p>
 
           <div className="footer__links">
@@ -48,19 +51,19 @@ export function Footer() {
             {whatsappHref && (
               <a href={whatsappHref} target="_blank" rel="noopener noreferrer">
                 <WhatsApp size={14} />
-                WhatsApp
+                {t.footer.whatsapp}
               </a>
             )}
             {contactEmailHref && (
               <a href={contactEmailHref}>
                 <Mail size={14} />
-                Email
+                {t.footer.email}
               </a>
             )}
           </div>
 
           <a className="footer__top-link" href="#top">
-            Back to top
+            {t.common.backToTop}
             <span aria-hidden="true">↑</span>
           </a>
         </div>

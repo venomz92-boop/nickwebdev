@@ -1,30 +1,9 @@
+import { useI18n } from "../i18n";
 import { Reveal } from "./Reveal";
 
-const steps = [
-  {
-    number: "01",
-    label: "Brief",
-    title: "Tell Me About Your Project",
-    description:
-      "Share your business details, goals, and the type of website you need.",
-  },
-  {
-    number: "02",
-    label: "Build & review",
-    title: "Build and Review",
-    description:
-      "I create the agreed website and give you an opportunity to review the work within the included revision limit.",
-  },
-  {
-    number: "03",
-    label: "Handover",
-    title: "Deploy and Handover",
-    description:
-      "After final payment, I complete the agreed handover and deployment process.",
-  },
-];
-
 export function Process() {
+  const { t } = useI18n();
+
   return (
     <section className="section process" id="process" aria-labelledby="process-title">
       <div className="container">
@@ -32,22 +11,28 @@ export function Process() {
           <div>
             <p className="eyebrow">
               <span className="eyebrow__dot" aria-hidden="true" />
-              The process
+              {t.process.eyebrow}
             </p>
             <h2 className="section-title" id="process-title">
-              Simple, Clear, and <span className="text-gradient">Straightforward</span>
+              {t.process.titleLead}{" "}
+              <span className="text-gradient">{t.process.titleAccent}</span>
             </h2>
           </div>
-          <p className="section-lede">
-            A defined path from the first conversation to the finished website.
-          </p>
+          <p className="section-lede">{t.process.lede}</p>
         </Reveal>
 
         <ol className="process__steps">
-          {steps.map((step, index) => (
-            <Reveal className="process-step" key={step.number} delay={index * 90} as="li">
+          {t.process.steps.map((step, index) => (
+            <Reveal
+              className="process-step"
+              key={step.label}
+              delay={index * 90}
+              as="li"
+            >
               <div className="process-step__top">
-                <span className="process-step__number">{step.number}</span>
+                <span className="process-step__number">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
                 <span className="process-step__label">{step.label}</span>
               </div>
               <span className="process-step__rule" aria-hidden="true">

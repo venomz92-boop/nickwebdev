@@ -3,13 +3,14 @@ import cafe from "../assets/cafe.jpg";
 import highland from "../assets/highland.jpg";
 import { ArrowUpRight } from "./Icons";
 
-export function ShowcaseDevices() {
+type ShowcaseDevicesProps = {
+  label: string;
+  note: string;
+};
+
+export function ShowcaseDevices({ label, note }: ShowcaseDevicesProps) {
   return (
-    <div
-      className="showcase"
-      role="img"
-      aria-label="Illustrative website previews layered across a laptop, tablet, and phone: a highland tour operator, a neighbourhood café, and a mountain homestay."
-    >
+    <div className="showcase" role="img" aria-label={label}>
       <div className="showcase__grid" aria-hidden="true" />
       <div className="showcase__glow" aria-hidden="true" />
       <span className="showcase__halo" aria-hidden="true" />
@@ -106,7 +107,7 @@ export function ShowcaseDevices() {
 
       <span className="showcase__label" aria-hidden="true">
         <span className="showcase__label-dot" />
-        Illustrative website designs
+        {note}
       </span>
     </div>
   );

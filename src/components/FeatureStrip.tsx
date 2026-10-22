@@ -1,35 +1,18 @@
+import { useI18n } from "../i18n";
 import { Briefcase, CloudUpload, Gauge, MonitorSmartphone } from "./Icons";
 
-const features = [
-  {
-    title: "Responsive Design",
-    description: "Layouts designed for mobile, tablet, and desktop.",
-    icon: MonitorSmartphone,
-  },
-  {
-    title: "Performance Focused",
-    description: "Lightweight pages built with efficient web technologies.",
-    icon: Gauge,
-  },
-  {
-    title: "Reliable Deployment",
-    description: "Pages deployment setup.",
-    icon: CloudUpload,
-  },
-  {
-    title: "Business Ready",
-    description: "Clear information and contact options for your customers.",
-    icon: Briefcase,
-  },
-];
+const featureIcons = [MonitorSmartphone, Gauge, CloudUpload, Briefcase];
 
 export function FeatureStrip() {
+  const { t } = useI18n();
+
   return (
-    <section className="feature-section" aria-label="What every website includes">
+    <section className="feature-section" aria-label={t.features.label}>
       <div className="container">
         <div className="feature-strip">
-          {features.map((feature) => {
-            const Icon = feature.icon;
+          {t.features.items.map((feature, index) => {
+            const Icon = featureIcons[index] ?? MonitorSmartphone;
+
             return (
               <article className="feature" key={feature.title}>
                 <span className="feature__icon">

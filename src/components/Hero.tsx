@@ -1,7 +1,10 @@
+import { useI18n } from "../i18n";
 import { ArrowUpRight, Check } from "./Icons";
 import { HeroLaptop } from "./HeroLaptop";
 
 export function Hero() {
+  const { t } = useI18n();
+
   return (
     <section className="hero" aria-labelledby="hero-title">
       <div className="hero__backdrop" aria-hidden="true" />
@@ -9,39 +12,42 @@ export function Hero() {
         <div className="hero__content">
           <p className="hero__eyebrow">
             <span className="hero__eyebrow-dot" aria-hidden="true" />
-            Modern websites. Stronger businesses.
+            {t.hero.eyebrow}
           </p>
 
-          <h1 className="hero__title" id="hero-title" aria-label="We build websites that grow your business">
-            <span aria-hidden="true">We build</span>
-            <span className="hero__title-accent" aria-hidden="true">websites</span>
-            <span aria-hidden="true">that grow</span>
-            <span aria-hidden="true">your business</span>
+          <h1
+            className="hero__title"
+            id="hero-title"
+            aria-label={t.hero.titleLabel}
+          >
+            <span aria-hidden="true">{t.hero.titleLead}</span>
+            <span className="hero__title-accent" aria-hidden="true">
+              {t.hero.titleAccent}
+            </span>
+            <span aria-hidden="true">{t.hero.titleMid}</span>
+            <span aria-hidden="true">{t.hero.titleEnd}</span>
           </h1>
 
-          <p className="hero__lede">
-            Professional, responsive websites for small businesses that want to build
-            credibility, showcase their services, and reach more customers online.
-          </p>
+          <p className="hero__lede">{t.hero.lede}</p>
 
           <div className="hero__actions">
             <a className="button button--primary" href="#contact">
-              Get started
+              {t.hero.primaryCta}
               <ArrowUpRight size={18} />
             </a>
             <a className="button button--secondary" href="#portfolio">
-              View my work
+              {t.hero.secondaryCta}
             </a>
           </div>
 
           <p className="hero__note">
             <Check size={14} />
-            Clear pricing. Defined scope. Practical solutions.
+            {t.hero.note}
           </p>
         </div>
 
         <div className="hero__visual">
-          <HeroLaptop />
+          <HeroLaptop label={t.hero.deviceLabel} />
         </div>
       </div>
     </section>

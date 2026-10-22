@@ -8,14 +8,16 @@
  * whatsappNumber: international format, digits only.
  * whatsappDisplay: the same number, formatted for display.
  * email: optional. Leave blank to hide email links.
+ *
+ * Anything a visitor reads lives in src/i18n (one dictionary per
+ * language), including the WhatsApp greeting, so this file only holds
+ * the numbers and the package structure.
  */
 export const siteConfig = {
   name: "Nick's WebDev",
-  tagline: "Professional websites for growing businesses.",
   email: "",
   whatsappNumber: "60165833713",
   whatsappDisplay: "+60 16-583 3713",
-  whatsappMessage: "Hi Nick, I'd like to discuss a website project.",
 };
 
 export function buildWhatsAppHref(message: string): string | null {
@@ -24,17 +26,42 @@ export function buildWhatsAppHref(message: string): string | null {
   return `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
 }
 
-export const whatsappHref = buildWhatsAppHref(siteConfig.whatsappMessage);
-
 export const contactEmailHref = siteConfig.email
   ? `mailto:${siteConfig.email}`
   : null;
 
-export const packageOptions = [
-  "Simple Website – RM399",
-  "Business Website – RM799",
-  "Business Website Plus – RM1,299",
-  "Not Sure Yet",
-] as const;
+/**
+ * Website packages, in the order they are shown on the page.
+ *
+ * `id` is a stable key shared by the pricing cards and the enquiry form,
+ * so it never changes with the language. Names, descriptions and features
+ * come from the translation dictionaries, keyed by this id.
+ */
+export type WebsitePackageId = "simple" | "business" | "plus";
 
-export type PackageOption = (typeof packageOptions)[number];
+export const websitePackages: ReadonlyArray<{
+  id: WebsitePackageId;
+  price: string;
+  featured?: boolean;
+  premium?: boolean;
+}> = [
+  { id: "simple", price: "RM399" },
+  { id: "business", price: "RM799", featured: true },
+  { id: "plus", price: "RM1,299", premium: true },
+];
+
+/** Package choices offered in the enquiry form, including "not sure yet". */
+export type PackageOption = WebsitePackageId | "unsure";
+
+export const packageOptions: readonly PackageOption[] = [
+  "simple",
+  "business",
+  "plus",
+  "unsure",
+];
+
+export const defaultPackageOption: PackageOption = "unsure";
+
+export function isPackageOption(value: string): value is PackageOption {
+  return packageOptions.includes(value as PackageOption);
+}
