@@ -226,7 +226,7 @@ export const en = {
     projectType: "Personal project",
     projectTitle: "KundasangHomestay.my",
     description:
-      "A live homestay website that shows my work in web design, publishing and presenting business information online.",
+      "A completed live booking platform that shows my work in web design, publishing and presenting business information online.",
     tagsLabel: "What it covers",
     tags: ["Web design", "Website build", "Business information"],
     note: "A personal project, shown as an example of my work.",
