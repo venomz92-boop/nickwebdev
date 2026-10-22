@@ -69,7 +69,7 @@ export const en = {
       },
       {
         title: "Reliable Deployment",
-        description: "Pages deployment setup.",
+        description: "Fast deployment setup on Cloudflare Pages.",
       },
       {
         title: "Business Ready",
@@ -105,7 +105,7 @@ export const en = {
       },
       {
         title: "Launch & Hosting",
-        description: "Your website published online, connected to domain or your own custom domain and checked before handover.",
+        description: "Your website published online, connected to your custom domain and checked before handover.",
       },
     ],
     note: "Need something outside this list? Custom databases, booking systems, and payment integrations require a separate assessment.",
@@ -131,10 +131,10 @@ export const en = {
           "A clear one-page website for businesses that need a simple, professional place online.",
         includes: [
           "One-page website",
-          "Business intro, services, photos and contact details, up to 6 sections",
+          "Business intro, services, photos and contact details, up to 4 sections",
           "WhatsApp and click-to-call buttons",
           "Fits phones, tablets and computers",
-          "Google setup: page titles, descriptions and indexing",
+          "Basic page titles and meta descriptions",
           "Published online with SSL",
           "One round of changes",
           "Text and photos provided by you",
@@ -151,6 +151,7 @@ export const en = {
           "Everything in Simple Website",
           "Up to three pages, e.g. Home, About and Services",
           "Navigation menu, plus a contact page with map and opening hours",
+          "Google Search Console indexing setup",
           "WhatsApp and call buttons on every page",
           "Two rounds of changes",
         ],
@@ -237,7 +238,7 @@ export const en = {
         label: "Handover",
         title: "Launch and Handover",
         description:
-          "After final payment, I publish the finished website, check it on real devices and hand it over with connected domain with package that already agreed on.",
+          "After final payment, I publish the finished website, check it on real devices and hand it over according to the agreed package.",
       },
     ],
   },
