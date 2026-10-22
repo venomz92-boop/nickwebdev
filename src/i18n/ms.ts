@@ -109,8 +109,8 @@ export const ms: Dictionary = {
         description: "Borang pertanyaan ringkas yang disambungkan ke aliran kerja anda.",
       },
       {
-        title: "Deployment",
-        description: "Persediaan repositori GitHub dan deployment Cloudflare Pages.",
+        title: "Pelancaran & Pengehosan",
+        description: "Laman web anda diterbitkan dalam talian, disambungkan ke domain atau domain custom anda dan disemak sebelum penyerahan.",
       },
     ],
     note: "Perlukan sesuatu di luar senarai ini? Pangkalan data tersuai, sistem tempahan dan integrasi pembayaran memerlukan penilaian berasingan.",
