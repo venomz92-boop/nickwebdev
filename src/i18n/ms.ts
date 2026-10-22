@@ -233,7 +233,7 @@ export const ms: Dictionary = {
     projectType: "Projek peribadi",
     projectTitle: "KundasangHomestay.my",
     description:
-      "Laman web homestay yang masih aktif, menunjukkan kerja saya dalam reka bentuk web, penerbitan dan penyampaian maklumat perniagaan dalam talian.",
+      "Laman web booking platform yang masih aktif & lengkap, menunjukkan kerja saya dalam reka bentuk web, penerbitan dan penyampaian maklumat perniagaan dalam talian.",
     tagsLabel: "Bidang",
     tags: ["Reka bentuk web", "Pembinaan laman web", "Maklumat perniagaan"],
     note: "Projek peribadi, dipaparkan sebagai contoh hasil kerja saya.",
