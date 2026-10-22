@@ -1,20 +1,20 @@
 /**
  * English copy — the reference dictionary.
  *
- * `Dictionary` is derived from this object, so every other language file
- * must provide exactly the same shape. Add new text here first, then run
- * the type checker: any missing translation shows up as a type error.
+ * `Dictionary` is derived from this object, so every language file must
+ * provide exactly the same shape. Add new text here first, then run the
+ * type checker: any missing translation shows up as a type error.
  */
 export const en = {
   meta: {
-    title: "Nick's WebDev — Professional Websites for Growing Businesses",
+    title: "Nick's WebDev — Websites for Small Businesses in Malaysia",
     description:
-      "Nick's WebDev builds professional, responsive websites for small businesses in Malaysia. Clear pricing, defined scope, and practical websites that help you establish a stronger online presence.",
-    ogTitle: "Nick's WebDev — Professional Websites for Growing Businesses",
+      "Nick's WebDev builds clean, mobile-friendly websites for small businesses in Malaysia. Clear pricing, a fixed scope, and a simple process from start to launch.",
+    ogTitle: "Nick's WebDev — Websites for Small Businesses in Malaysia",
     ogDescription:
-      "Professional, responsive websites for small businesses in Malaysia. Landing pages from RM399, starter websites from RM799, and business websites from RM1,299.",
+      "Websites for small businesses in Malaysia. Simple Websites from RM399, Business Websites from RM799, and Business Website Plus from RM1,299.",
     twitterDescription:
-      "Professional, responsive websites for small businesses in Malaysia. Clear pricing and defined scope.",
+      "Websites for small businesses in Malaysia. Clear pricing and a fixed scope.",
   },
   common: {
     skipToContent: "Skip to content",
@@ -40,86 +40,86 @@ export const en = {
   },
   header: {
     cta: "Start a project",
-    note: "Professional websites. Built for growing businesses.",
+    note: "Websites for small businesses. Clear pricing, no guesswork.",
   },
   hero: {
-    eyebrow: "Modern websites. Stronger businesses.",
-    titleLead: "We build",
+    eyebrow: "Websites for small businesses in Malaysia",
+    titleLead: "I build",
     titleAccent: "websites",
-    titleMid: "that grow",
-    titleEnd: "your business",
-    titleLabel: "We build websites that grow your business",
-    lede: "Professional, responsive websites for small businesses that want to build credibility, showcase their services, and reach more customers online.",
-    primaryCta: "Get started",
-    secondaryCta: "View my work",
-    note: "Clear pricing. Defined scope. Practical solutions.",
+    titleMid: "that look",
+    titleEnd: "professional",
+    titleLabel: "I build websites that look professional",
+    lede: "Clean, mobile-friendly websites for small businesses in Malaysia. Clear pricing, a fixed scope, and a site that's ready to share with customers.",
+    primaryCta: "Start a project",
+    secondaryCta: "See my work",
+    note: "Clear pricing. Fixed scope. No surprises.",
     deviceLabel:
-      "An angled laptop showing an example website for a fictional digital studio, with a dark violet abstract backdrop, editorial headline, and a keyboard lit by a soft purple glow.",
+      "An angled laptop showing an example website for a fictional digital studio, with a dark violet backdrop, a large editorial headline, and a keyboard lit by a soft purple glow.",
   },
   features: {
     label: "What every website includes",
     items: [
       {
-        title: "Responsive Design",
-        description: "Layouts designed for mobile, tablet, and desktop.",
+        title: "Mobile-friendly",
+        description: "Looks right on phones, tablets and computers.",
       },
       {
-        title: "Performance Focused",
-        description: "Lightweight pages built with efficient web technologies.",
+        title: "Fast-loading",
+        description: "Simple pages that don't keep customers waiting.",
       },
       {
-        title: "Reliable Deployment",
-        description: "Fast deployment setup on Cloudflare Pages.",
+        title: "Live and connected",
+        description: "Published online and connected to your domain.",
       },
       {
-        title: "Business Ready",
-        description: "Clear information and contact options for your customers.",
+        title: "Customer-ready",
+        description: "Clear information and easy contact buttons.",
       },
     ],
   },
   services: {
-    eyebrow: "What I offer",
-    titleLead: "Website Solutions for",
-    titleAccent: "Growing Businesses",
-    lede: "From focused landing pages to multi-page business websites, I help small businesses establish a professional online presence without unnecessary complexity.",
+    eyebrow: "What I do",
+    titleLead: "Websites for",
+    titleAccent: "Small Businesses",
+    lede: "Whether you need a simple one-page site or a larger business website, I build clean, mobile-friendly pages without the agency price tag.",
     items: [
       {
-        title: "Landing Page Creation",
-        description: "A focused page for one offer, service, or campaign.",
+        title: "One-page websites",
+        description: "One clear page for your business, services and contact details.",
       },
       {
-        title: "Starter Business Websites",
-        description: "A clear home for your business essentials.",
+        title: "Business websites",
+        description: "A few pages for your business, services and contact information.",
       },
       {
-        title: "Multi-Page Business Websites",
-        description: "Room to explain your services across multiple pages.",
+        title: "Larger websites",
+        description: "More pages for businesses with more services to explain.",
       },
       {
-        title: "WhatsApp Contact Integration",
-        description: "A direct, familiar way for customers to reach you.",
+        title: "WhatsApp buttons",
+        description: "Let customers message you straight from the site.",
       },
       {
-        title: "Contact Form Setup",
-        description: "A simple enquiry form connected to your workflow.",
+        title: "Contact forms",
+        description: "A simple form that sends enquiries to your email.",
       },
       {
-        title: "Launch & Hosting",
-        description: "Your website published online, connected to your custom domain and checked before handover.",
+        title: "Launch and hosting",
+        description: "I publish the site, connect your domain and check it before handover.",
       },
     ],
-    note: "Need something outside this list? Custom databases, booking systems, and payment integrations require a separate assessment.",
+    note: "Need something else? Booking systems, online payments and custom features need a separate quote.",
     showcase: {
       label:
-        "Illustrative website previews layered across a laptop, tablet, and phone: a highland tour operator, a neighbourhood café, and a mountain homestay.",
-      note: "Illustrative website designs",
+        "Example website designs shown on a laptop, tablet and phone: a highland tour operator, a neighbourhood café and a mountain homestay.",
+      note: "Example designs only",
     },
   },
-    pricing: {
-    eyebrow: "Straightforward pricing",
+  pricing: {
+    eyebrow: "Clear pricing",
     titleLead: "Choose the Right Website",
     titleAccent: "for Your Business",
-    lede: "Three clear packages for different stages of business. Each package lists exactly what is included, so you know what to expect before work begins.",
+    lede: "Three straightforward packages for businesses at different stages. Each one lists exactly what you get, so there are no surprises before work starts.",
     currencyLabel: "All prices in",
     currencyValue: "Malaysian Ringgit (RM)",
     includesLabel: "What you get",
@@ -128,12 +128,12 @@ export const en = {
       simple: {
         name: "Simple Website",
         description:
-          "A clear one-page website for businesses that need a simple, professional place online.",
+          "A clean one-page website for businesses that need a simple, professional place online.",
         includes: [
           "One-page website",
           "Business intro, services, photos and contact details, up to 4 sections",
           "WhatsApp and click-to-call buttons",
-          "Fits phones, tablets and computers",
+          "Looks right on phones, tablets and computers",
           "Published online with HTTPS",
           "One round of changes",
           "Text and photos provided by you",
@@ -147,11 +147,11 @@ export const en = {
         description:
           "A website of up to three pages, including Contact, with room to introduce your business and explain your services.",
         includes: [
-          "Everything in Simple Website, with standard inner-page layouts",
+          "Everything in Simple Website, plus standard layouts for the extra pages",
           "Up to 3 pages total, including Contact (e.g. Home, Services, Contact)",
-          "Navigation menu, with a contact page including map and opening hours",
+          "A navigation menu, plus a contact page with map and opening hours",
           "WhatsApp and call buttons on every page",
-          "Basic Google setup: page titles, descriptions and submission to Google (no ranking guarantee)",
+          "Basic Google setup: page titles, descriptions and getting the site listed on Google (no ranking guarantee)",
           "Two rounds of changes",
         ],
         delivery: "5–7 working days",
@@ -163,9 +163,9 @@ export const en = {
         description:
           "A website of up to five pages, including Contact, with a contact form and useful extra sections.",
         includes: [
-          "Everything in Business Website, with standard inner-page layouts",
+          "Everything in Business Website, plus standard layouts for the extra pages",
           "Up to 5 pages total, including Contact",
-          "One contact form sent to your email, with basic spam protection and testing",
+          "One contact form that sends to your email, with basic spam protection and tested before handover",
           "FAQ section, up to 8 questions",
           "Photo gallery or portfolio, up to 12 images",
           "Three rounds of changes",
@@ -178,12 +178,12 @@ export const en = {
     rounds: {
       label: "Good to know",
       title: "What counts as a round of changes?",
-      body: "A round of changes means one submitted list of reasonable changes to the agreed website. New pages, new features and major changes outside the agreed scope may cost extra.",
+      body: "A round of changes means one list of reasonable changes to the agreed website. New pages, new features and major changes outside the agreed scope may cost extra.",
     },
     terms: {
       eyebrow: "The finer details",
       title: "Pricing terms",
-      lede: "Every project starts with a clear written plan. These terms apply to all three packages above.",
+      lede: "Every project starts with a clear written scope. These terms apply to all three packages.",
       items: [
         "50% deposit before work begins and 50% before final handover.",
         "Clients provide their business information, text and photos.",
@@ -198,11 +198,11 @@ export const en = {
     },
   },
   portfolio: {
-    eyebrow: "Selected work",
-    titleLead: "Built with",
-    titleAccent: "Purpose",
-    lede: "Explore my work and see how modern web design can help businesses present themselves online.",
-    previewLabel: "Visit KundasangHomestay.my in a new tab",
+    eyebrow: "A project I built",
+    titleLead: "Real work,",
+    titleAccent: "still live",
+    lede: "KundasangHomestay.my is a personal project I built and still look after. It shows how I present a business online.",
+    previewLabel: "Open KundasangHomestay.my in a new tab",
     imageAlt:
       "Homepage of KundasangHomestay.my showing a Mount Kinabalu landscape, the headline 'Cozy, verified properties in Kundasang & Ranau', and a search panel.",
     visit: "Visit website",
@@ -210,64 +210,60 @@ export const en = {
     projectType: "Personal project",
     projectTitle: "KundasangHomestay.my",
     description:
-      "A homestay-related web project demonstrating my experience with website development, deployment, and presenting business information online.",
-    tagsLabel: "Project disciplines",
-    tags: [
-      "Website development",
-      "Deployment",
-      "Online business information",
-    ],
-    note: "A live personal project, shown as an example of my work.",
+      "A live homestay website that shows my work in web design, publishing and presenting business information online.",
+    tagsLabel: "What it covers",
+    tags: ["Web design", "Website build", "Business information"],
+    note: "A personal project, shown as an example of my work.",
   },
   process: {
-    eyebrow: "The process",
-    titleLead: "Simple, Clear, and",
-    titleAccent: "Straightforward",
-    lede: "A defined path from the first conversation to the finished website.",
+    eyebrow: "How it works",
+    titleLead: "Simple from",
+    titleAccent: "start to finish",
+    lede: "Here's what happens after you get in touch.",
     steps: [
       {
         label: "Brief",
-        title: "Tell Me About Your Project",
+        title: "Tell me about your business",
         description:
-          "Share your business details, goals, and the type of website you need.",
+          "Send your business details, the pages you need and any text or photos you already have.",
       },
       {
-        label: "Build & review",
-        title: "Build and Review",
+        label: "Build",
+        title: "I build your site",
         description:
-          "I create the agreed website and give you an opportunity to review the work within the included revision limit.",
+          "I design and build the agreed website, then send you a link to review it.",
       },
       {
-        label: "Handover",
-        title: "Launch and Handover",
+        label: "Launch",
+        title: "Review and go live",
         description:
-          "After final payment, I publish the finished website, check it on real devices and hand it over according to the agreed package.",
+          "You send your changes within the package's revision limit. After final payment, I publish the site and connect your domain.",
       },
     ],
   },
   contact: {
     cta: {
-      eyebrow: "Ready to get started?",
-      titleLead: "Let's build something",
-      titleAccent: "great together",
-      lede: "Have a business idea or need a website? Tell me what you have in mind, and let's discuss the right solution for your business.",
+      eyebrow: "Ready to start?",
+      titleLead: "Tell me what",
+      titleAccent: "you need.",
+      lede: "Need a website, or not sure which package fits? Send me a message and I'll help you choose.",
       primary: "Start a project",
-      whatsapp: "Contact on WhatsApp",
+      whatsapp: "Chat on WhatsApp",
       whatsappLabel: "Contact Nick's WebDev on WhatsApp",
-      whatsappFallbackLabel: "Go to the project enquiry section",
+      whatsappFallbackLabel: "Go to the project enquiry form",
       whatsappTitle: "Chat on WhatsApp",
       whatsappFallbackTitle:
         "Use the project enquiry form to build a WhatsApp message.",
     },
     intro: {
-      eyebrow: "Start a conversation",
-      titleLead: "Tell me what you have",
-      titleAccent: "in mind.",
-      lede: "Share a few details about your business and the website you need. Your answers become a ready-to-send WhatsApp message — nothing is sent until you press send.",
+      eyebrow: "Let's talk",
+      titleLead: "Tell me what you",
+      titleAccent: "have in mind.",
+      lede: "Share a few details about your business and the website you need. Your answers become a ready-to-send WhatsApp message. Nothing is sent until you press send.",
       assurances: [
-        "Clear scope before work begins",
-        "Straightforward communication on WhatsApp",
-        "No payment details needed to start",
+        "A clear scope before work starts",
+        "Straightforward chat on WhatsApp",
+        "No payment details needed to enquire",
       ],
       locationLabel: "Based in Malaysia",
       locationNote: "Working with businesses across the country.",
@@ -288,18 +284,18 @@ export const en = {
       optional: "(optional)",
       businessPlaceholder: "Your business",
       package: "Website package",
-      packageUnsure: "Not Sure Yet",
-      description: "Project description",
+      packageUnsure: "Not sure yet",
+      description: "Project details",
       descriptionPlaceholder:
-        "What does your business do, and what would you like your website to help with?",
-      descriptionHint: "A few sentences is enough to get started.",
+        "What does your business do, and what do you need the website to do?",
+      descriptionHint: "A few sentences is enough.",
       submit: "Continue on WhatsApp",
       submitNote:
-        "Your message opens in WhatsApp for you to review before sending. You can change or cancel it there.",
+        "Your message opens in WhatsApp so you can review it before sending. You can change or cancel it there.",
       openedTitle: "WhatsApp is opening in a new tab.",
       openedBody:
-        "Check the message, then press send. Your enquiry is only sent once you do.",
-      errorTitle: "WhatsApp is not available right now.",
+        "Check the message, then press send. Your enquiry is only sent after you press send in WhatsApp.",
+      errorTitle: "WhatsApp isn't available right now.",
       errorBody:
         "No message was opened. Please try again later or use the contact details on this page.",
     },
@@ -309,7 +305,7 @@ export const en = {
       description: "Please share a little more about your project.",
     },
     enquiry: {
-      greeting: "Hi Nick, I'd like to discuss a website project.",
+      greeting: "Hi Nick, I'd like to talk about a website project.",
       name: "Name",
       business: "Business",
       package: "Package",
@@ -317,56 +313,56 @@ export const en = {
     },
   },
   faq: {
-    eyebrow: "Frequently asked",
-    titleLead: "Questions,",
-    titleAccent: "answered.",
-    lede: "The practical details about packages, timelines, and what to expect when working together.",
-    contact: "Still have a question? Start a conversation",
+    eyebrow: "Common questions",
+    titleLead: "Questions I",
+    titleAccent: "get asked",
+    lede: "The practical stuff about packages, timelines and how I work.",
+    contact: "Still have a question? Send me a message",
     items: [
       {
         question: "How much does a website cost?",
         answer:
-          "My packages start at RM399 for a simple one-page website, RM799 for a business website with up to three pages, and RM1,299 for Business Website Plus with up to five pages.",
+          "My packages start at RM399 for a one-page site, RM799 for a three-page business site, and RM1,299 for a five-page site with a contact form, FAQ and gallery.",
       },
       {
         question: "How long does it take?",
         answer:
-          "A Simple Website usually takes 3–5 working days, a Business Website 5–7 working days, and Business Website Plus 7–10 working days after all required content is received. Timelines may vary with scope and feedback.",
+          "Usually 3–5 working days for Simple, 5–7 for Business, and 7–10 for Plus. The clock starts once I have your deposit and all your content.",
       },
       {
         question: "Do I need to buy a domain?",
         answer:
-          "Domain registration is separate. I can help explain the setup, and domain costs depend on the domain provider and extension.",
+          "Yes, you'll need your own domain. I can help you connect it. The price depends on the name and extension you choose.",
       },
       {
         question: "Can you add a booking system or online payments?",
         answer:
-          "These features require separate technical assessment and quotation. They are not included in the standard packages.",
+          "Yes, but that's separate work and needs its own quote. It's not part of the standard packages.",
       },
       {
         question: "Can you modify my existing website?",
         answer:
-          "My standard packages focus on new website creation. Changes to an existing website depend on its platform, access permissions, source code, and technical requirements.",
+          "My packages are for new websites. If you already have a site, I'll need to look at the platform and access before I can quote.",
       },
       {
         question: "Do you provide ongoing maintenance?",
         answer:
-          "Additional updates may be available by agreement. Ongoing maintenance and technical troubleshooting are not automatically included in the website packages.",
+          "Not by default. If you need updates after handover, send me a message and I'll quote based on the work.",
       },
       {
         question: "What do I need to prepare?",
         answer:
-          "Please prepare your business details, services, contact information, and any text or images you would like included.",
+          "Your business details, services, contact information, and the text and photos you want on the site.",
       },
       {
         question: "What are your payment terms?",
         answer:
-          "A 50% deposit is required to begin work, with the remaining 50% due before final handover.",
+          "A 50% deposit to start, and the remaining 50% before I hand over the finished site.",
       },
     ],
   },
   footer: {
-    tagline: "Professional websites for growing businesses.",
+    tagline: "Websites for small businesses.",
     copyright: "© {year} Nick's WebDev. All rights reserved.",
     whatsapp: "WhatsApp",
     email: "Email",

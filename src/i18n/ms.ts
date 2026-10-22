@@ -3,22 +3,21 @@ import type { Dictionary } from "./en";
 /**
  * Bahasa Melayu copy.
  *
- * Typed as `Dictionary`, so a missing or misspelt key is a compile error.
- * Technical terms that Malaysian clients already recognise — WhatsApp,
- * deployment, GitHub, Cloudflare Pages, landing page — are kept as-is
- * rather than forced into literal translations.
+ * Typed as `Dictionary`, so every key must match en.ts. The wording is
+ * written in natural Malaysian Malay; common terms such as WhatsApp,
+ * Google, HTTPS and portfolio are kept as-is.
  */
 export const ms: Dictionary = {
   meta: {
-    title: "Nick's WebDev — Laman Web Profesional untuk Perniagaan Yang Berkembang",
+    title: "Nick's WebDev — Laman Web untuk Perniagaan Kecil di Malaysia",
     description:
-      "Nick's WebDev membina laman web profesional dan responsif untuk perniagaan kecil di Malaysia. Harga yang jelas, skop yang ditetapkan dan laman web praktikal yang membantu anda membina kehadiran dalam talian yang lebih kukuh.",
+      "Nick's WebDev bina laman web yang kemas dan mesra telefon untuk perniagaan kecil di Malaysia. Harga jelas, skop tetap, dan proses yang mudah dari mula sampai siap.",
     ogTitle:
-      "Nick's WebDev — Laman Web Profesional untuk Perniagaan Yang Berkembang",
+      "Nick's WebDev — Laman Web untuk Perniagaan Kecil di Malaysia",
     ogDescription:
-      "Laman web profesional dan responsif untuk perniagaan kecil di Malaysia. Halaman pendaratan dari RM399, laman web permulaan dari RM799 dan laman web perniagaan dari RM1,299.",
+      "Laman web untuk perniagaan kecil di Malaysia. Laman Web Ringkas dari RM399, Laman Web Perniagaan dari RM799, dan Laman Web Perniagaan Plus dari RM1,299.",
     twitterDescription:
-      "Laman web profesional dan responsif untuk perniagaan kecil di Malaysia. Harga yang jelas dan skop yang ditetapkan.",
+      "Laman web untuk perniagaan kecil di Malaysia. Harga jelas dan skop yang tetap.",
   },
   common: {
     skipToContent: "Langkau ke kandungan",
@@ -30,10 +29,10 @@ export const ms: Dictionary = {
   },
   nav: {
     primary: "Navigasi utama",
-    mobile: "Navigasi mudah alih",
+    mobile: "Navigasi telefon",
     footer: "Navigasi pengaki",
-    openMenu: "Buka menu navigasi",
-    closeMenu: "Tutup menu navigasi",
+    openMenu: "Buka menu",
+    closeMenu: "Tutup menu",
     items: {
       services: "Perkhidmatan",
       pricing: "Harga",
@@ -44,120 +43,123 @@ export const ms: Dictionary = {
   },
   header: {
     cta: "Mulakan projek",
-    note: "Laman web profesional. Dibina untuk perniagaan yang berkembang.",
+    note: "Laman web untuk perniagaan kecil. Harga jelas, tanpa teka-teki.",
   },
   hero: {
-    eyebrow: "Laman web moden. Perniagaan lebih kukuh.",
-    titleLead: "Kami bina",
+    eyebrow: "Laman web untuk perniagaan kecil di Malaysia",
+    titleLead: "Saya bina",
     titleAccent: "laman web",
-    titleMid: "yang memajukan",
-    titleEnd: "perniagaan anda",
-    titleLabel: "Kami bina laman web yang memajukan perniagaan anda",
-    lede: "Laman web profesional dan responsif untuk perniagaan kecil yang ingin membina kredibiliti, mempamerkan perkhidmatan dan menjangkau lebih ramai pelanggan dalam talian.",
-    primaryCta: "Mulakan",
+    titleMid: "yang nampak",
+    titleEnd: "profesional",
+    titleLabel: "Saya bina laman web yang nampak profesional",
+    lede: "Laman web yang kemas dan mesra telefon untuk perniagaan kecil di Malaysia. Harga jelas, skop tetap, dan laman web yang sedia dikongsi dengan pelanggan.",
+    primaryCta: "Mulakan projek",
     secondaryCta: "Lihat hasil kerja",
-    note: "Harga yang jelas. Skop yang ditetapkan. Penyelesaian praktikal.",
+    note: "Harga jelas. Skop tetap. Tanpa kejutan.",
     deviceLabel:
-      "Sebuah komputer riba condong yang memaparkan contoh laman web untuk studio digital rekaan, dengan latar abstrak ungu gelap, tajuk gaya editorial dan papan kekunci bercahaya ungu lembut.",
+      "Komputer riba condong yang menunjukkan contoh laman web studio digital rekaan, dengan latar ungu gelap, tajuk besar dan papan kekunci bercahaya ungu lembut.",
   },
   features: {
-    label: "Apa yang disertakan dalam setiap laman web",
+    label: "Apa yang ada pada setiap laman web",
     items: [
       {
-        title: "Reka Bentuk Responsif",
-        description: "Susun atur direka untuk telefon, tablet dan komputer.",
+        title: "Mesra telefon",
+        description: "Kemas pada telefon, tablet dan komputer.",
       },
       {
-        title: "Fokus Prestasi",
-        description: "Halaman ringan dibina dengan teknologi web yang cekap.",
+        title: "Cepat dibuka",
+        description: "Halaman ringan yang tidak buat pelanggan tunggu lama.",
       },
       {
-        title: "Deployment Boleh Dipercayai",
-        description: "Persediaan deployment pantas di Cloudflare Pages.",
+        title: "Siap diterbitkan",
+        description: "Laman web diterbitkan dan disambungkan ke domain anda.",
       },
       {
-        title: "Sedia Untuk Perniagaan",
-        description:
-          "Maklumat yang jelas dan pilihan hubungan untuk pelanggan anda.",
+        title: "Sedia untuk pelanggan",
+        description: "Maklumat jelas dan butang hubungi yang mudah.",
       },
     ],
   },
   services: {
-    eyebrow: "Apa yang saya tawarkan",
-    titleLead: "Penyelesaian Laman Web untuk",
-    titleAccent: "Perniagaan Yang Berkembang",
-    lede: "Daripada halaman pendaratan yang fokus kepada laman web perniagaan berbilang halaman, saya membantu perniagaan kecil membina kehadiran dalam talian yang profesional tanpa kerumitan yang tidak perlu.",
+    eyebrow: "Apa yang saya buat",
+    titleLead: "Laman web untuk",
+    titleAccent: "Perniagaan Kecil",
+    lede: "Sama ada anda perlukan laman web satu halaman atau laman web perniagaan yang lebih besar, saya bina laman web yang kemas dan mesra telefon tanpa harga agensi.",
     items: [
       {
-        title: "Pembinaan Landing Page",
-        description: "Satu halaman fokus untuk satu tawaran, perkhidmatan atau kempen.",
+        title: "Laman web satu halaman",
+        description:
+          "Satu halaman untuk perkenalkan perniagaan, perkhidmatan dan cara hubungi anda.",
       },
       {
-        title: "Laman Web Perniagaan Permulaan",
-        description: "Tempat yang jelas untuk perkara asas perniagaan anda.",
+        title: "Laman web perniagaan",
+        description:
+          "Beberapa halaman untuk perniagaan, perkhidmatan dan maklumat hubungan.",
       },
       {
-        title: "Laman Web Perniagaan Berbilang Halaman",
-        description: "Ruang untuk menerangkan perkhidmatan anda merentas beberapa halaman.",
+        title: "Laman web lebih besar",
+        description:
+          "Lebih banyak halaman untuk perniagaan yang ada banyak perkhidmatan.",
       },
       {
-        title: "Integrasi Hubungan WhatsApp",
-        description: "Cara yang terus dan biasa untuk pelanggan menghubungi anda.",
+        title: "Butang WhatsApp",
+        description: "Pelanggan boleh terus mesej anda dari laman web.",
       },
       {
-        title: "Persediaan Borang Hubungi",
-        description: "Borang pertanyaan ringkas yang disambungkan ke aliran kerja anda.",
+        title: "Borang hubungi",
+        description: "Borang ringkas yang hantar pertanyaan ke e-mel anda.",
       },
       {
-        title: "Pelancaran & Pengehosan",
-        description: "Laman web anda diterbitkan dalam talian, disambungkan ke domain custom anda dan disemak sebelum penyerahan.",
+        title: "Pelancaran dan pengehosan",
+        description:
+          "Saya terbitkan laman web, sambungkan domain dan semak sebelum serah.",
       },
     ],
-    note: "Perlukan sesuatu di luar senarai ini? Pangkalan data tersuai, sistem tempahan dan integrasi pembayaran memerlukan penilaian berasingan.",
+    note: "Perlukan sesuatu yang lain? Sistem tempahan, pembayaran dalam talian dan ciri tersuai perlu sebut harga berasingan.",
     showcase: {
       label:
-        "Pratonton laman web ilustrasi yang disusun pada komputer riba, tablet dan telefon: operator pelancongan tanah tinggi, kafe kejiranan dan homestay di kawasan pergunungan.",
-      note: "Reka bentuk laman web ilustrasi",
+        "Contoh reka bentuk laman web pada komputer riba, tablet dan telefon: operator pelancongan tanah tinggi, kafe kejiranan dan homestay di kawasan gunung.",
+      note: "Contoh reka bentuk sahaja",
     },
   },
-    pricing: {
+  pricing: {
     eyebrow: "Harga yang jelas",
-    titleLead: "Pilih Laman Web Yang Tepat",
+    titleLead: "Pilih Laman Web yang Tepat",
     titleAccent: "untuk Perniagaan Anda",
-    lede: "Tiga pakej yang jelas untuk peringkat perniagaan yang berbeza. Setiap pakej menyenaraikan dengan tepat apa yang disertakan, supaya anda tahu apa yang dijangka sebelum kerja bermula.",
+    lede: "Tiga pakej mudah untuk perniagaan pada peringkat yang berbeza. Setiap pakej menyenaraikan apa yang anda dapat, supaya anda tahu apa yang akan anda terima sebelum kerja bermula.",
     currencyLabel: "Semua harga dalam",
     currencyValue: "Ringgit Malaysia (RM)",
     includesLabel: "Apa yang anda dapat",
-    deliveryLabel: "Anggaran siap",
+    deliveryLabel: "Anggaran masa siap",
     packages: {
       simple: {
         name: "Laman Web Ringkas",
         description:
-          "Laman web satu halaman yang jelas untuk perniagaan yang memerlukan kehadiran dalam talian yang mudah dan profesional.",
+          "Laman web satu halaman yang ringkas dan profesional untuk perniagaan yang memerlukan kehadiran dalam talian.",
         includes: [
           "Laman web satu halaman",
-          "Pengenalan perniagaan, perkhidmatan, foto dan butiran hubungan, sehingga 4 bahagian",
-          "Butang WhatsApp dan butang hubungi terus",
-          "Berfungsi pada telefon, tablet dan komputer",
-          "Diterbitkan dalam talian dengan HTTPS",
-          "Satu pusingan perubahan",
+          "Pengenalan perniagaan, perkhidmatan, foto dan maklumat hubungan, sehingga 4 bahagian",
+          "Butang WhatsApp dan butang hubungi",
+          "Sesuai untuk telefon, tablet dan komputer",
+          "Laman web diterbitkan dengan HTTPS",
+          "Satu pusingan pindaan",
           "Teks dan foto disediakan oleh anda",
         ],
         delivery: "3–5 hari bekerja",
         cta: "Pilih Ringkas",
-        badge: "Permulaan",
+        badge: "Asas",
       },
       business: {
         name: "Laman Web Perniagaan",
         description:
-          "Laman web sehingga tiga halaman, termasuk Hubungi, dengan ruang untuk memperkenalkan perniagaan anda dan menerangkan perkhidmatan anda.",
+          "Laman web sehingga tiga halaman, termasuk halaman Hubungi, dengan ruang untuk memperkenalkan perniagaan dan perkhidmatan anda.",
         includes: [
-          "Semua dalam Laman Web Ringkas, dengan susun atur halaman dalam yang standard",
-          "Sehingga 3 halaman keseluruhan, termasuk Hubungi (cth. Utama, Perkhidmatan, Hubungi)",
-          "Menu navigasi, dengan halaman hubungi termasuk peta dan waktu operasi",
-          "Butang WhatsApp dan panggilan pada setiap halaman",
-          "Persediaan asas Google: tajuk halaman, keterangan dan penyerahan kepada Google (tiada jaminan kedudukan)",
-          "Dua pusingan perubahan",
+          "Semua dalam Laman Web Ringkas, dengan reka bentuk standard untuk halaman tambahan",
+          "Sehingga 3 halaman secara keseluruhan, termasuk Hubungi (contoh: Utama, Perkhidmatan, Hubungi)",
+          "Menu navigasi, serta halaman Hubungi dengan peta dan waktu operasi",
+          "Butang WhatsApp dan butang panggilan di setiap halaman",
+          "Persediaan asas Google: tajuk halaman, keterangan dan pendaftaran laman web di Google (tiada jaminan kedudukan carian)",
+          "Dua pusingan pindaan",
         ],
         delivery: "5–7 hari bekerja",
         cta: "Pilih Perniagaan",
@@ -166,14 +168,14 @@ export const ms: Dictionary = {
       plus: {
         name: "Laman Web Perniagaan Plus",
         description:
-          "Laman web sehingga lima halaman, termasuk Hubungi, dengan borang hubungi dan bahagian tambahan yang berguna.",
+          "Laman web sehingga lima halaman, termasuk halaman Hubungi, dengan borang hubungi dan bahagian tambahan yang berguna.",
         includes: [
-          "Semua dalam Laman Web Perniagaan, dengan susun atur halaman dalam yang standard",
-          "Sehingga 5 halaman keseluruhan, termasuk Hubungi",
-          "Satu borang hubungi dihantar ke e-mel anda, dengan perlindungan spam asas dan diuji sebelum penyerahan",
+          "Semua dalam Laman Web Perniagaan, dengan reka bentuk standard untuk halaman tambahan",
+          "Sehingga 5 halaman secara keseluruhan, termasuk Hubungi",
+          "Borang hubungi yang dihantar terus ke e-mel anda, lengkap dengan perlindungan spam asas dan diuji sebelum diserahkan",
           "Bahagian Soalan Lazim, sehingga 8 soalan",
-          "Galeri foto atau portfolio, sehingga 12 imej",
-          "Tiga pusingan perubahan",
+          "Galeri foto atau portfolio, sehingga 12 gambar",
+          "Tiga pusingan pindaan",
         ],
         delivery: "7–10 hari bekerja",
         cta: "Pilih Plus",
@@ -181,33 +183,33 @@ export const ms: Dictionary = {
       },
     },
     rounds: {
-      label: "Perlu diketahui",
-      title: "Apakah yang dikira sebagai satu pusingan perubahan?",
-      body: "Satu pusingan perubahan bermaksud satu senarai perubahan yang munasabah yang dihantar untuk laman web yang dipersetujui. Halaman baharu, ciri baharu dan perubahan besar di luar skop yang dipersetujui mungkin dikenakan caj tambahan.",
+      label: "Untuk makluman",
+      title: "Apa yang dikira sebagai satu pusingan pindaan?",
+      body: "Satu pusingan pindaan bermaksud satu senarai pindaan yang munasabah untuk laman web yang telah dipersetujui. Halaman baharu, ciri baharu dan pindaan besar di luar skop yang dipersetujui mungkin dikenakan caj tambahan.",
     },
     terms: {
-      eyebrow: "Butiran lanjut",
+      eyebrow: "Perkara penting",
       title: "Terma harga",
-      lede: "Setiap projek bermula dengan pelan bertulis yang jelas. Terma ini terpakai untuk ketiga-tiga pakej di atas.",
+      lede: "Setiap projek bermula dengan pelan bertulis yang jelas. Terma di bawah terpakai untuk ketiga-tiga pakej.",
       items: [
         "Deposit 50% sebelum kerja bermula dan 50% sebelum penyerahan akhir.",
-        "Pelanggan menyediakan maklumat perniagaan, teks dan foto mereka.",
-        "Satu bahasa disertakan. Bahasa tambahan akan disebutharga secara berasingan.",
+        "Pelanggan perlu menyediakan maklumat perniagaan, teks dan foto.",
+        "Satu bahasa disertakan. Bahasa tambahan akan diberikan sebut harga berasingan.",
         "Pembelian domain, pengehosan e-mel perniagaan dan perkhidmatan pihak ketiga berbayar tidak termasuk. Sambungan domain disertakan jika anda memiliki domain.",
-        "Halaman, bahagian, imej, soalan dan pusingan perubahan tambahan akan disebutharga secara berasingan.",
-        "Laman web tidak termasuk panel admin untuk sunting sendiri. Kemas kini kandungan selepas penyerahan akan dikenakan caj.",
+        "Halaman, bahagian, gambar, soalan dan pusingan pindaan tambahan akan diberikan sebut harga berasingan.",
+        "Pakej tidak termasuk panel admin untuk sunting sendiri. Kemas kini kandungan selepas penyerahan akan dikenakan caj.",
         "Persediaan asas Google tidak menjamin kedudukan carian.",
         "Sistem tempahan yang kompleks, pembayaran dalam talian dan ciri tersuai memerlukan sebut harga berasingan.",
-        "Waranti 7 hari untuk pembaikan ralat disertakan selepas pelancaran. Kandungan dan ciri baharu tidak termasuk.",
+        "Waranti 7 hari untuk pembaikan masalah teknikal selepas pelancaran. Kandungan dan ciri baharu tidak termasuk.",
       ],
     },
   },
   portfolio: {
-    eyebrow: "Hasil kerja terpilih",
-    titleLead: "Dibina Dengan",
-    titleAccent: "Tujuan",
-    lede: "Terokai hasil kerja saya dan lihat bagaimana reka bentuk web moden dapat membantu perniagaan mempersembahkan diri mereka dalam talian.",
-    previewLabel: "Lawati KundasangHomestay.my dalam tab baharu",
+    eyebrow: "Hasil kerja",
+    titleLead: "Projek sebenar,",
+    titleAccent: "masih aktif",
+    lede: "KundasangHomestay.my ialah projek peribadi yang saya bina dan masih uruskan. Ia menunjukkan cara saya bentangkan perniagaan dalam talian.",
+    previewLabel: "Buka KundasangHomestay.my dalam tab baharu",
     imageAlt:
       "Halaman utama KundasangHomestay.my memaparkan pemandangan Gunung Kinabalu, tajuk 'Cozy, verified properties in Kundasang & Ranau' dan panel carian.",
     visit: "Lawati laman web",
@@ -215,106 +217,102 @@ export const ms: Dictionary = {
     projectType: "Projek peribadi",
     projectTitle: "KundasangHomestay.my",
     description:
-      "Projek web berkaitan homestay yang menunjukkan pengalaman saya dalam pembangunan laman web, deployment dan penyampaian maklumat perniagaan dalam talian.",
-    tagsLabel: "Bidang projek",
-    tags: [
-      "Pembangunan laman web",
-      "Deployment",
-      "Maklumat perniagaan dalam talian",
-    ],
-    note: "Projek peribadi yang aktif, dipaparkan sebagai contoh hasil kerja saya.",
+      "Laman web homestay yang masih aktif, menunjukkan kerja saya dalam reka bentuk web, penerbitan dan penyampaian maklumat perniagaan dalam talian.",
+    tagsLabel: "Bidang",
+    tags: ["Reka bentuk web", "Pembinaan laman web", "Maklumat perniagaan"],
+    note: "Projek peribadi, dipaparkan sebagai contoh hasil kerja saya.",
   },
   process: {
-    eyebrow: "Proses",
-    titleLead: "Ringkas, Jelas dan",
-    titleAccent: "Terus Terang",
-    lede: "Laluan yang jelas daripada perbualan pertama hingga laman web siap.",
+    eyebrow: "Cara ia berjalan",
+    titleLead: "Mudah dari",
+    titleAccent: "mula sampai siap",
+    lede: "Ini yang berlaku selepas anda hubungi saya.",
     steps: [
       {
         label: "Taklimat",
-        title: "Ceritakan Tentang Projek Anda",
+        title: "Ceritakan perniagaan anda",
         description:
-          "Kongsikan butiran perniagaan anda, matlamat dan jenis laman web yang anda perlukan.",
+          "Hantar maklumat perniagaan, halaman yang anda perlukan dan teks atau gambar yang sudah ada.",
       },
       {
-        label: "Bina & semak",
-        title: "Bina dan Semak",
+        label: "Bina",
+        title: "Saya bina laman web",
         description:
-          "Saya membina laman web yang dipersetujui dan memberi anda peluang untuk menyemak hasil kerja dalam had pindaan yang disertakan.",
+          "Saya reka dan bina laman web yang dipersetujui, kemudian hantar pautan untuk anda semak.",
       },
       {
-        label: "Penyerahan",
-        title: "Launch dan Handover",
+        label: "Pelancaran",
+        title: "Semak dan terbitkan",
         description:
-          "Selepas pembayaran akhir, saya menerbitkan laman web yang siap, menyemaknya pada telefon dan komputer sebenar serta menyerahkannya mengikut pakej yang dipersetujui.",
+          "Anda hantar pindaan dalam had pusingan pakej. Selepas bayaran akhir, saya terbitkan laman web dan sambungkan domain anda.",
       },
     ],
   },
   contact: {
     cta: {
-      eyebrow: "Sedia untuk bermula?",
-      titleLead: "Mari kita bina sesuatu yang",
-      titleAccent: "hebat bersama",
-      lede: "Ada idea perniagaan atau perlukan laman web? Ceritakan apa yang anda fikirkan, dan mari kita bincangkan penyelesaian yang sesuai untuk perniagaan anda.",
+      eyebrow: "Sedia untuk mula?",
+      titleLead: "Beritahu saya apa",
+      titleAccent: "yang anda perlu.",
+      lede: "Perlukan laman web, atau tak pasti pakej mana yang sesuai? Hantar mesej dan saya bantu pilih.",
       primary: "Mulakan projek",
-      whatsapp: "Hubungi di WhatsApp",
+      whatsapp: "Sembang di WhatsApp",
       whatsappLabel: "Hubungi Nick's WebDev di WhatsApp",
-      whatsappFallbackLabel: "Pergi ke bahagian pertanyaan projek",
+      whatsappFallbackLabel: "Pergi ke borang pertanyaan projek",
       whatsappTitle: "Sembang di WhatsApp",
       whatsappFallbackTitle:
-        "Gunakan borang pertanyaan projek untuk membina mesej WhatsApp.",
+        "Gunakan borang pertanyaan projek untuk bina mesej WhatsApp.",
     },
     intro: {
-      eyebrow: "Mulakan perbualan",
-      titleLead: "Ceritakan apa yang anda",
-      titleAccent: "fikirkan.",
-      lede: "Kongsikan sedikit butiran tentang perniagaan anda dan laman web yang anda perlukan. Jawapan anda menjadi mesej WhatsApp yang sedia dihantar — tiada apa-apa dihantar sehingga anda tekan hantar.",
+      eyebrow: "Mari berbincang",
+      titleLead: "Ceritakan apa",
+      titleAccent: "yang anda perlukan.",
+      lede: "Beritahu sedikit tentang perniagaan anda dan laman web yang anda perlukan. Jawapan anda akan jadi mesej WhatsApp yang sedia dihantar. Tiada apa dihantar sehingga anda tekan hantar.",
       assurances: [
-        "Skop yang jelas sebelum kerja bermula",
-        "Komunikasi yang mudah di WhatsApp",
-        "Tiada butiran pembayaran diperlukan untuk bermula",
+        "Skop jelas sebelum kerja bermula",
+        "Urusan mudah melalui WhatsApp",
+        "Tiada bayaran untuk bertanya",
       ],
       locationLabel: "Berpangkalan di Malaysia",
-      locationNote: "Bekerjasama dengan perniagaan di seluruh negara.",
+      locationNote: "Bekerja dengan perniagaan di seluruh negara.",
       whatsappLabel: "WhatsApp",
       emailLabel: "E-mel",
       configNote: {
-        lead: "Nota pembangun: tambah nombor WhatsApp dalam",
-        tail: "untuk mengaktifkan pertanyaan WhatsApp.",
+        lead: "Nota pembangun: masukkan nombor WhatsApp dalam",
+        tail: "untuk hidupkan pertanyaan WhatsApp.",
       },
     },
     form: {
       label: "Pertanyaan projek",
-      title: "Mari bermula dengan perkara asas.",
+      title: "Mula dengan perkara asas.",
       via: "MELALUI WHATSAPP",
       name: "Nama",
       namePlaceholder: "Nama anda",
       business: "Nama perniagaan",
       optional: "(pilihan)",
-      businessPlaceholder: "Perniagaan anda",
+      businessPlaceholder: "Nama perniagaan anda",
       package: "Pakej laman web",
-      packageUnsure: "Belum Pasti",
-      description: "Keterangan projek",
+      packageUnsure: "Belum pasti",
+      description: "Butiran projek",
       descriptionPlaceholder:
-        "Apakah perniagaan anda, dan bagaimana laman web boleh membantu?",
-      descriptionHint: "Beberapa ayat sudah cukup untuk bermula.",
-      submit: "Teruskan di WhatsApp",
+        "Apa yang perniagaan anda buat, dan apa yang anda perlukan dari laman web ini?",
+      descriptionHint: "Beberapa ayat sudah cukup.",
+      submit: "Teruskan ke WhatsApp",
       submitNote:
-        "Mesej anda akan dibuka dalam WhatsApp untuk anda semak sebelum dihantar. Anda boleh mengubah atau membatalkannya di sana.",
+        "Mesej anda akan dibuka dalam WhatsApp untuk disemak sebelum dihantar. Anda boleh ubah atau batalkan di sana.",
       openedTitle: "WhatsApp sedang dibuka dalam tab baharu.",
       openedBody:
-        "Semak mesej itu, kemudian tekan hantar. Pertanyaan anda hanya dihantar apabila anda berbuat demikian.",
+        "Semak mesej, kemudian tekan hantar. Pertanyaan anda hanya dihantar selepas anda tekan hantar.",
       errorTitle: "WhatsApp tidak tersedia buat masa ini.",
       errorBody:
-        "Tiada mesej dibuka. Sila cuba lagi kemudian atau gunakan butiran hubungan di halaman ini.",
+        "Tiada mesej dibuka. Cuba lagi nanti atau gunakan maklumat hubungan di halaman ini.",
     },
     errors: {
       name: "Sila masukkan nama anda.",
-      package: "Sila pilih satu pakej.",
-      description: "Sila kongsikan sedikit lagi tentang projek anda.",
+      package: "Sila pilih pakej.",
+      description: "Sila beri sedikit butiran tentang projek anda.",
     },
     enquiry: {
-      greeting: "Hai Nick, saya ingin berbincang tentang projek laman web.",
+      greeting: "Hai Nick, saya nak tanya tentang projek laman web.",
       name: "Nama",
       business: "Perniagaan",
       package: "Pakej",
@@ -323,55 +321,55 @@ export const ms: Dictionary = {
   },
   faq: {
     eyebrow: "Soalan lazim",
-    titleLead: "Soalan,",
-    titleAccent: "dijawab.",
-    lede: "Butiran praktikal tentang pakej, tempoh masa dan apa yang dijangka apabila bekerjasama.",
-    contact: "Masih ada soalan? Mulakan perbualan",
+    titleLead: "Soalan yang",
+    titleAccent: "sering ditanya",
+    lede: "Perkara praktikal tentang pakej, tempoh siap dan cara saya bekerja.",
+    contact: "Masih ada soalan? Hantar mesej",
     items: [
       {
-        question: "Berapakah kos laman web?",
+        question: "Berapa harga laman web?",
         answer:
-          "Pakej saya bermula dari RM399 untuk laman web ringkas satu halaman, RM799 untuk laman web perniagaan sehingga tiga halaman, dan RM1,299 untuk Laman Web Perniagaan Plus sehingga lima halaman.",
+          "Pakej bermula RM399 untuk satu halaman, RM799 untuk tiga halaman, dan RM1,299 untuk lima halaman dengan borang hubungi, Soalan Lazim dan galeri.",
       },
       {
-        question: "Berapa lama masa yang diambil?",
+        question: "Berapa lama untuk siap?",
         answer:
-          "Laman Web Ringkas biasanya mengambil masa 3–5 hari bekerja, Laman Web Perniagaan 5–7 hari bekerja, dan Laman Web Perniagaan Plus 7–10 hari bekerja selepas semua kandungan yang diterima. Tempoh masa boleh berbeza bergantung pada skop dan maklum balas.",
+          "Biasanya 3–5 hari bekerja untuk Ringkas, 5–7 hari untuk Perniagaan, dan 7–10 hari untuk Plus. Tempoh bermula selepas deposit dan semua kandungan diterima.",
       },
       {
-        question: "Perlukah saya membeli domain?",
+        question: "Perlukah saya beli domain sendiri?",
         answer:
-          "Pendaftaran domain adalah berasingan. Saya boleh membantu menerangkan penyediaannya, dan kos domain bergantung pada penyedia domain dan sambungan yang dipilih.",
+          "Ya, domain dibeli berasingan. Saya boleh bantu sambungkan. Harga bergantung pada nama dan sambungan yang anda pilih.",
       },
       {
-        question: "Bolehkah anda menambah sistem tempahan atau pembayaran dalam talian?",
+        question: "Boleh tambah sistem tempahan atau pembayaran dalam talian?",
         answer:
-          "Ciri-ciri ini memerlukan penilaian teknikal dan sebut harga yang berasingan. Ia tidak termasuk dalam pakej standard.",
+          "Boleh, tetapi ia kerja berasingan dan perlu sebut harga sendiri. Ia tidak termasuk dalam pakej standard.",
       },
       {
-        question: "Bolehkah anda mengubah suai laman web saya yang sedia ada?",
+        question: "Boleh ubah laman web sedia ada?",
         answer:
-          "Pakej standard saya memberi tumpuan kepada pembinaan laman web baharu. Perubahan pada laman web sedia ada bergantung pada platformnya, kebenaran akses, kod sumber dan keperluan teknikal.",
+          "Pakej saya untuk laman web baharu. Kalau anda sudah ada laman web, saya perlu tengok platform dan akses dahulu sebelum beri harga.",
       },
       {
-        question: "Adakah anda menyediakan penyelenggaraan berterusan?",
+        question: "Ada penyelenggaraan bulanan?",
         answer:
-          "Kemas kini tambahan boleh disediakan melalui persetujuan. Penyelenggaraan berterusan dan penyelesaian masalah teknikal tidak disertakan secara automatik dalam pakej laman web.",
+          "Tidak termasuk. Kalau perlu kemas kini selepas serah, hantar mesej dan saya beri harga ikut kerja.",
       },
       {
         question: "Apa yang perlu saya sediakan?",
         answer:
-          "Sila sediakan butiran perniagaan anda, perkhidmatan, maklumat hubungan dan sebarang teks atau imej yang anda ingin sertakan.",
+          "Maklumat perniagaan, perkhidmatan, maklumat hubungan, serta teks dan gambar yang anda mahu masukkan.",
       },
       {
-        question: "Apakah terma pembayaran anda?",
+        question: "Apakah terma pembayaran?",
         answer:
-          "Deposit 50% diperlukan untuk memulakan kerja, dan baki 50% perlu dibayar sebelum penyerahan akhir.",
+          "Deposit 50% untuk mula, dan baki 50% sebelum laman web diserahkan.",
       },
     ],
   },
   footer: {
-    tagline: "Laman web profesional untuk perniagaan yang berkembang.",
+    tagline: "Laman web untuk perniagaan kecil.",
     copyright: "© {year} Nick's WebDev. Hak cipta terpelihara.",
     whatsapp: "WhatsApp",
     email: "E-mel",
