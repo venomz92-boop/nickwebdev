@@ -105,7 +105,7 @@ export const en = {
       },
       {
         title: "Deployment",
-        description: "GitHub repository setup and Cloudflare Pages deployment.",
+        description: "Your website published online, connected to domain or custom domain and checked before handover.",
       },
     ],
     note: "Need something outside this list? Custom databases, booking systems, and payment integrations require a separate assessment.",
