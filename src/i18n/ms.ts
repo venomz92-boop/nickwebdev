@@ -240,9 +240,9 @@ export const ms: Dictionary = {
       },
       {
         label: "Penyerahan",
-        title: "Lancar dan Serah",
+        title: "Launch dan Handover",
         description:
-          "Selepas pembayaran akhir, saya menerbitkan laman web yang siap, menyemaknya pada telefon dan komputer sebenar, dan menyerahkannya dengan domain anda sudah disambungkan dan package yang telah dipersetujui.",
+          "Selepas pembayaran akhir, saya menerbitkan laman web yang siap, menyemaknya pada telefon dan komputer sebenar. Menyerahkannya dengan domain yang sudah disambungkan mengikut package yang telah dipersetujui.",
       },
     ],
   },
