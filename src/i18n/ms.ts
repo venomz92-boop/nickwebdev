@@ -183,11 +183,11 @@ export const ms: Dictionary = {
         badge: "Paling lengkap",
       },
       custom: {
-        name: "Laman Web Tersuai",
+        name: "Laman Web Custom",
         description:
           "Untuk sistem tempahan, pembayaran dalam talian, laman web berbilang bahasa atau ciri di luar pakej standard.",
         includes: [
-          "Halaman dan bahagian tersuai",
+          "Halaman dan bahagian custom",
           "Borang tempahan atau pertanyaan",
           "Integrasi pembayaran dalam talian",
           "Pilihan berbilang bahasa",
@@ -195,7 +195,7 @@ export const ms: Dictionary = {
         ],
         delivery: "Ikut skop",
         cta: "Minta sebut harga",
-        badge: "Tersuai",
+        badge: "Custom",
       },
     },
     rounds: {
