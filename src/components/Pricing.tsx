@@ -9,8 +9,6 @@ type PricingProps = {
 
 export function Pricing({ onSelectPackage }: PricingProps) {
   const { t } = useI18n();
-  const standardPackages = websitePackages.filter((item) => item.id !== "custom");
-  const customPackage = websitePackages.find((item) => item.id === "custom");
 
   return (
     <section className="section pricing" id="pricing" aria-labelledby="pricing-title">
@@ -35,9 +33,10 @@ export function Pricing({ onSelectPackage }: PricingProps) {
           <strong>{t.pricing.currencyValue}</strong>
         </div>
 
-        <div className="pricing-grid">
-          {standardPackages.map((item, index) => {
+        <div className="pricing-grid pricing-grid--four">
+          {websitePackages.map((item, index) => {
             const copy = t.pricing.packages[item.id];
+            const isCustom = item.id === "custom";
 
             return (
               <Reveal
@@ -58,6 +57,11 @@ export function Pricing({ onSelectPackage }: PricingProps) {
                   <h3 className="pricing-card__name">{copy.name}</h3>
                 </div>
                 <div className="pricing-card__price">
+                  {isCustom && (
+                    <span className="pricing-card__from">
+                      {t.pricing.fromLabel}
+                    </span>
+                  )}
                   <span className="pricing-card__currency">RM</span>
                   <span className="pricing-card__amount">
                     {item.price.replace("RM", "")}
@@ -100,56 +104,6 @@ export function Pricing({ onSelectPackage }: PricingProps) {
               </Reveal>
             );
           })}
-
-          {customPackage && (
-            <Reveal className="pricing-custom" delay={standardPackages.length * 80}>
-              <div className="pricing-custom__copy">
-                <div className="pricing-custom__heading">
-                  <span className="pricing-custom__badge">
-                    {t.pricing.packages.custom.badge}
-                  </span>
-                  <h3>{t.pricing.packages.custom.name}</h3>
-                </div>
-                <p className="pricing-custom__description">
-                  {t.pricing.packages.custom.description}
-                </p>
-                <ul className="pricing-custom__list">
-                  {t.pricing.packages.custom.includes.map((feature) => (
-                    <li key={feature}>
-                      <span className="pricing-card__check">
-                        <Check size={12} />
-                      </span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="pricing-custom__aside">
-                <div className="pricing-custom__price">
-                  <span>{t.pricing.fromLabel}</span>
-                  <strong>{customPackage.price}</strong>
-                </div>
-
-                <div className="pricing-card__delivery pricing-custom__delivery">
-                  <Clock size={16} />
-                  <span>
-                    <strong>{t.pricing.deliveryLabel}</strong>
-                    {t.pricing.packages.custom.delivery}
-                  </span>
-                </div>
-
-                <button
-                  className="pricing-card__cta pricing-custom__cta"
-                  type="button"
-                  onClick={() => onSelectPackage("custom")}
-                >
-                  {t.pricing.packages.custom.cta}
-                  <ArrowUpRight size={17} />
-                </button>
-              </div>
-            </Reveal>
-          )}
         </div>
 
         <Reveal className="pricing-rounds" delay={80}>
