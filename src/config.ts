@@ -37,7 +37,7 @@ export const contactEmailHref = siteConfig.email
  * so it never changes with the language. Names, descriptions and features
  * come from the translation dictionaries, keyed by this id.
  */
-export type WebsitePackageId = "simple" | "business" | "plus";
+export type WebsitePackageId = "simple" | "business" | "plus" | "custom";
 
 export const websitePackages: ReadonlyArray<{
   id: WebsitePackageId;
@@ -48,6 +48,7 @@ export const websitePackages: ReadonlyArray<{
   { id: "simple", price: "RM399" },
   { id: "business", price: "RM799", featured: true },
   { id: "plus", price: "RM1,299", premium: true },
+  { id: "custom", price: "RM2,499" },
 ];
 
 /** Package choices offered in the enquiry form, including "not sure yet". */
@@ -57,6 +58,7 @@ export const packageOptions: readonly PackageOption[] = [
   "simple",
   "business",
   "plus",
+  "custom",
   "unsure",
 ];
 

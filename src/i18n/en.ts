@@ -12,7 +12,7 @@ export const en = {
       "Nick's WebDev builds clean, mobile-friendly websites for small businesses in Malaysia. Clear pricing, a fixed scope, and a simple process from start to launch.",
     ogTitle: "Nick's WebDev — Websites for Small Businesses in Malaysia",
     ogDescription:
-      "Websites for small businesses in Malaysia. Simple Websites from RM399, Business Websites from RM799, and Business Website Plus from RM1,299.",
+      "Websites for small businesses in Malaysia. Simple Websites from RM399, Business Websites from RM799, Business Website Plus from RM1,299, and custom projects from RM2,499.",
     twitterDescription:
       "Websites for small businesses in Malaysia. Clear pricing and a fixed scope.",
   },
@@ -119,9 +119,10 @@ export const en = {
     eyebrow: "Clear pricing",
     titleLead: "Choose the Right Website",
     titleAccent: "for Your Business",
-    lede: "Three straightforward packages for businesses at different stages. Each one lists exactly what you get, so there are no surprises before work starts.",
+    lede: "Three straightforward packages for businesses at different stages, plus a custom option for anything outside the standard scope. Each one lists exactly what you get, so there are no surprises before work starts.",
     currencyLabel: "All prices in",
     currencyValue: "Malaysian Ringgit (RM)",
+    fromLabel: "From",
     includesLabel: "What you get",
     deliveryLabel: "Estimated completion",
     packages: {
@@ -174,6 +175,21 @@ export const en = {
         cta: "Choose Plus",
         badge: "Most complete",
       },
+      custom: {
+        name: "Custom Website",
+        description:
+          "For booking systems, online payments, multi-language websites or features outside the standard packages.",
+        includes: [
+          "Custom pages and sections",
+          "Booking or enquiry forms",
+          "Online payment integration",
+          "Multi-language setup available",
+          "Final scope and price confirmed in writing",
+        ],
+        delivery: "Based on scope",
+        cta: "Request a quote",
+        badge: "Custom",
+      },
     },
     rounds: {
       label: "Good to know",
@@ -183,11 +199,11 @@ export const en = {
     terms: {
       eyebrow: "The finer details",
       title: "Pricing terms",
-      lede: "Every project starts with a clear written scope. These terms apply to all three packages.",
+      lede: "Every project starts with a clear written scope. These terms apply to all packages, including custom projects.",
       items: [
         "50% deposit before work begins and 50% before final handover.",
         "Clients provide their business information, text and photos.",
-        "One language is included. Additional languages are quoted separately.",
+        "Standard packages include one language. Additional languages are quoted separately.",
         "Domain purchase, business email hosting and paid third-party services are excluded. Domain connection is included if you own the domain.",
         "Extra pages, sections, images, questions and revision rounds are quoted separately.",
         "Websites do not include a self-edit admin panel. Content updates after handover are chargeable.",
@@ -322,7 +338,7 @@ export const en = {
       {
         question: "How much does a website cost?",
         answer:
-          "My packages start at RM399 for a one-page site, RM799 for a three-page business site, and RM1,299 for a five-page site with a contact form, FAQ and gallery.",
+          "The standard packages start at RM399 for a one-page site, RM799 for a three-page business site, and RM1,299 for a five-page site with a contact form, FAQ and gallery. Custom projects start from RM2,499.",
       },
       {
         question: "How long does it take?",
@@ -337,7 +353,7 @@ export const en = {
       {
         question: "Can you add a booking system or online payments?",
         answer:
-          "Yes, but that's separate work and needs its own quote. It's not part of the standard packages.",
+          "Yes. Booking systems and online payments are custom work, quoted separately. Custom projects start from RM2,499.",
       },
       {
         question: "Can you modify my existing website?",

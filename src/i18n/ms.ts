@@ -15,7 +15,7 @@ export const ms: Dictionary = {
     ogTitle:
       "Nick's WebDev — Laman Web untuk Perniagaan Kecil di Malaysia",
     ogDescription:
-      "Laman web untuk perniagaan kecil di Malaysia. Laman Web Ringkas dari RM399, Laman Web Perniagaan dari RM799, dan Laman Web Perniagaan Plus dari RM1,299.",
+      "Laman web untuk perniagaan kecil di Malaysia. Laman Web Ringkas dari RM399, Laman Web Perniagaan dari RM799, Laman Web Perniagaan Plus dari RM1,299, dan projek tersuai dari RM2,499.",
     twitterDescription:
       "Laman web untuk perniagaan kecil di Malaysia. Harga jelas dan skop yang tetap.",
   },
@@ -126,9 +126,10 @@ export const ms: Dictionary = {
     eyebrow: "Harga yang jelas",
     titleLead: "Pilih Laman Web yang Tepat",
     titleAccent: "untuk Perniagaan Anda",
-    lede: "Tiga pakej mudah untuk perniagaan pada peringkat yang berbeza. Setiap pakej menyenaraikan apa yang anda dapat, supaya anda tahu apa yang akan anda terima sebelum kerja bermula.",
+    lede: "Tiga pakej standard untuk perniagaan pada peringkat yang berbeza, serta pilihan tersuai untuk keperluan di luar skop standard. Setiap pakej menyenaraikan apa yang anda dapat, supaya anda tahu apa yang akan anda terima sebelum kerja bermula.",
     currencyLabel: "Semua harga dalam",
     currencyValue: "Ringgit Malaysia (RM)",
+    fromLabel: "Dari",
     includesLabel: "Apa yang anda dapat",
     deliveryLabel: "Anggaran masa siap",
     packages: {
@@ -181,6 +182,21 @@ export const ms: Dictionary = {
         cta: "Pilih Plus",
         badge: "Paling lengkap",
       },
+      custom: {
+        name: "Laman Web Tersuai",
+        description:
+          "Untuk sistem tempahan, pembayaran dalam talian, laman web berbilang bahasa atau ciri di luar pakej standard.",
+        includes: [
+          "Halaman dan bahagian tersuai",
+          "Borang tempahan atau pertanyaan",
+          "Integrasi pembayaran dalam talian",
+          "Pilihan berbilang bahasa",
+          "Skop dan harga dimuktamadkan secara bertulis",
+        ],
+        delivery: "Ikut skop",
+        cta: "Minta sebut harga",
+        badge: "Tersuai",
+      },
     },
     rounds: {
       label: "Untuk makluman",
@@ -190,11 +206,11 @@ export const ms: Dictionary = {
     terms: {
       eyebrow: "Perkara penting",
       title: "Terma harga",
-      lede: "Setiap projek bermula dengan pelan bertulis yang jelas. Terma di bawah terpakai untuk ketiga-tiga pakej.",
+      lede: "Setiap projek bermula dengan pelan bertulis yang jelas. Terma di bawah terpakai untuk semua pakej, termasuk projek tersuai.",
       items: [
         "Deposit 50% sebelum kerja bermula dan 50% sebelum penyerahan akhir.",
         "Pelanggan perlu menyediakan maklumat perniagaan, teks dan foto.",
-        "Satu bahasa disertakan. Bahasa tambahan akan diberikan sebut harga berasingan.",
+        "Pakej standard termasuk satu bahasa. Bahasa tambahan akan diberikan sebut harga berasingan.",
         "Pembelian domain, pengehosan e-mel perniagaan dan perkhidmatan pihak ketiga berbayar tidak termasuk. Sambungan domain disertakan jika anda memiliki domain.",
         "Halaman, bahagian, gambar, soalan dan pusingan pindaan tambahan akan diberikan sebut harga berasingan.",
         "Pakej tidak termasuk panel admin untuk sunting sendiri. Kemas kini kandungan selepas penyerahan akan dikenakan caj.",
@@ -329,7 +345,7 @@ export const ms: Dictionary = {
       {
         question: "Berapa harga laman web?",
         answer:
-          "Pakej bermula RM399 untuk satu halaman, RM799 untuk tiga halaman, dan RM1,299 untuk lima halaman dengan borang hubungi, Soalan Lazim dan galeri.",
+          "Pakej standard bermula RM399 untuk satu halaman, RM799 untuk tiga halaman, dan RM1,299 untuk lima halaman dengan borang hubungi, Soalan Lazim dan galeri. Projek tersuai bermula dari RM2,499.",
       },
       {
         question: "Berapa lama untuk siap?",
@@ -344,7 +360,7 @@ export const ms: Dictionary = {
       {
         question: "Boleh tambah sistem tempahan atau pembayaran dalam talian?",
         answer:
-          "Boleh, tetapi ia kerja berasingan dan perlu sebut harga sendiri. Ia tidak termasuk dalam pakej standard.",
+          "Boleh. Sistem tempahan dan pembayaran dalam talian ialah kerja tersuai yang akan diberikan sebut harga berasingan. Projek tersuai bermula dari RM2,499.",
       },
       {
         question: "Boleh ubah laman web sedia ada?",
