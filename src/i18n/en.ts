@@ -237,7 +237,7 @@ export const en = {
         label: "Handover",
         title: "Launch and Handover",
         description:
-          "After final payment, I publish the finished website, check it on real devices and hand it over with domain connected with packages that already agreed on.",
+          "After final payment, I publish the finished website, check it on real devices and hand it over with connected domain with package that already agreed on.",
       },
     ],
   },
