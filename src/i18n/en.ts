@@ -235,9 +235,9 @@ export const en = {
       },
       {
         label: "Handover",
-        title: "Deploy and Handover",
+        title: "Launch and Handover",
         description:
-          "After final payment, I complete the agreed handover and deployment process.",
+          "After final payment, I publish the finished website, check it on real devices and hand it over with domain connected.",
       },
     ],
   },
