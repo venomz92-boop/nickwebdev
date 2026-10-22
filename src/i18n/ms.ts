@@ -15,7 +15,7 @@ export const ms: Dictionary = {
     ogTitle:
       "Nick's WebDev — Laman Web untuk Perniagaan Kecil di Malaysia",
     ogDescription:
-      "Laman web untuk perniagaan kecil di Malaysia. Laman Web Ringkas dari RM399, Laman Web Perniagaan dari RM799, Laman Web Perniagaan Plus dari RM1,299, dan projek tersuai dari RM2,499.",
+      "Laman web untuk perniagaan kecil di Malaysia. Laman Web Ringkas dari RM399, Laman Web Perniagaan dari RM799, Laman Web Perniagaan Plus dari RM1,299, dan projek custom dari RM2,499.",
     twitterDescription:
       "Laman web untuk perniagaan kecil di Malaysia. Harga jelas dan skop yang tetap.",
   },
@@ -115,7 +115,7 @@ export const ms: Dictionary = {
           "Saya terbitkan laman web, sambungkan domain dan semak sebelum serah.",
       },
     ],
-    note: "Perlukan sesuatu yang lain? Sistem tempahan, pembayaran dalam talian dan ciri tersuai perlu sebut harga berasingan.",
+    note: "Perlukan sesuatu yang lain? Sistem tempahan, pembayaran dalam talian dan ciri custom perlu sebut harga berasingan.",
     showcase: {
       label:
         "Contoh reka bentuk laman web pada komputer riba, tablet dan telefon: operator pelancongan tanah tinggi, kafe kejiranan dan homestay di kawasan gunung.",
@@ -126,7 +126,7 @@ export const ms: Dictionary = {
     eyebrow: "Harga yang jelas",
     titleLead: "Pilih Laman Web yang Tepat",
     titleAccent: "untuk Perniagaan Anda",
-    lede: "Tiga pakej standard untuk perniagaan pada peringkat yang berbeza, serta pilihan tersuai untuk keperluan di luar skop standard. Setiap pakej menyenaraikan apa yang anda dapat, supaya anda tahu apa yang akan anda terima sebelum kerja bermula.",
+    lede: "Tiga pakej standard untuk perniagaan pada peringkat yang berbeza, serta pilihan custom untuk keperluan di luar skop standard. Setiap pakej menyenaraikan apa yang anda dapat, supaya anda tahu apa yang akan anda terima sebelum kerja bermula.",
     currencyLabel: "Semua harga dalam",
     currencyValue: "Ringgit Malaysia (RM)",
     fromLabel: "Dari",
@@ -206,7 +206,7 @@ export const ms: Dictionary = {
     terms: {
       eyebrow: "Perkara penting",
       title: "Terma harga",
-      lede: "Setiap projek bermula dengan pelan bertulis yang jelas. Terma di bawah terpakai untuk semua pakej, termasuk projek tersuai.",
+      lede: "Setiap projek bermula dengan pelan bertulis yang jelas. Terma di bawah terpakai untuk semua pakej, termasuk projek custom.",
       items: [
         "Deposit 50% sebelum kerja bermula dan 50% sebelum penyerahan akhir.",
         "Pelanggan perlu menyediakan maklumat perniagaan, teks dan foto.",
@@ -215,7 +215,7 @@ export const ms: Dictionary = {
         "Halaman, bahagian, gambar, soalan dan pusingan pindaan tambahan akan diberikan sebut harga berasingan.",
         "Pakej tidak termasuk panel admin untuk sunting sendiri. Kemas kini kandungan selepas penyerahan akan dikenakan caj.",
         "Persediaan asas Google tidak menjamin kedudukan carian.",
-        "Sistem tempahan yang kompleks, pembayaran dalam talian dan ciri tersuai memerlukan sebut harga berasingan.",
+        "Sistem tempahan yang kompleks, pembayaran dalam talian dan ciri custom memerlukan sebut harga berasingan.",
         "Waranti 7 hari untuk pembaikan masalah teknikal selepas pelancaran. Kandungan dan ciri baharu tidak termasuk.",
       ],
     },
@@ -345,7 +345,7 @@ export const ms: Dictionary = {
       {
         question: "Berapa harga laman web?",
         answer:
-          "Pakej standard bermula RM399 untuk satu halaman, RM799 untuk tiga halaman, dan RM1,299 untuk lima halaman dengan borang hubungi, Soalan Lazim dan galeri. Projek tersuai bermula dari RM2,499.",
+          "Pakej standard bermula RM399 untuk satu halaman, RM799 untuk tiga halaman, dan RM1,299 untuk lima halaman dengan borang hubungi, Soalan Lazim dan galeri. Projek custom bermula dari RM2,499.",
       },
       {
         question: "Berapa lama untuk siap?",
@@ -360,7 +360,7 @@ export const ms: Dictionary = {
       {
         question: "Boleh tambah sistem tempahan atau pembayaran dalam talian?",
         answer:
-          "Boleh. Sistem tempahan dan pembayaran dalam talian ialah kerja tersuai yang akan diberikan sebut harga berasingan. Projek tersuai bermula dari RM2,499.",
+          "Boleh. Sistem tempahan dan pembayaran dalam talian ialah kerja custom yang akan diberikan sebut harga berasingan. Projek custom bermula dari RM2,499.",
       },
       {
         question: "Boleh ubah laman web sedia ada?",
