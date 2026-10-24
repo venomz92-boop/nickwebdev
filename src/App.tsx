@@ -5,6 +5,7 @@ import { FeatureStrip } from "./components/FeatureStrip";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
+import { PageBackdrop } from "./components/PageBackdrop";
 import { Portfolio } from "./components/Portfolio";
 import { Pricing } from "./components/Pricing";
 import { Process } from "./components/Process";
@@ -44,6 +45,7 @@ export default function App() {
 
   return (
     <>
+      <PageBackdrop />
       <a className="skip-link" href="#main-content">
         {t.common.skipToContent}
       </a>

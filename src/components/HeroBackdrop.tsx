@@ -1,8 +1,6 @@
 export function HeroBackdrop() {
   return (
     <div className="hero__backdrop" aria-hidden="true">
-      <span className="hero__grid" />
-
       <svg
         className="hero__monogram"
         viewBox="0 0 1000 1000"
@@ -45,10 +43,6 @@ export function HeroBackdrop() {
           <circle cx="832" cy="206" r="5" />
         </g>
       </svg>
-
-      <span className="hero__guide hero__guide--x" />
-      <span className="hero__guide hero__guide--y" />
-      <span className="hero__scan" />
     </div>
   );
 }
