@@ -1,5 +1,6 @@
 import { useI18n } from "../i18n";
 import { ArrowUpRight, Check } from "./Icons";
+import { HeroBackdrop } from "./HeroBackdrop";
 import { HeroLaptop } from "./HeroLaptop";
 
 export function Hero() {
@@ -7,7 +8,7 @@ export function Hero() {
 
   return (
     <section className="hero" aria-labelledby="hero-title">
-      <div className="hero__backdrop" aria-hidden="true" />
+      <HeroBackdrop />
       <div className="container hero__inner">
         <div className="hero__content">
           <p className="hero__eyebrow">
