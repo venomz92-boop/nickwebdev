@@ -127,6 +127,10 @@ export const ms: Dictionary = {
     titleLead: "Pilih Laman Web yang Tepat",
     titleAccent: "untuk Perniagaan Anda",
     lede: "Tiga pakej standard untuk perniagaan pada peringkat yang berbeza, serta pilihan custom untuk keperluan di luar skop standard. Setiap pakej menyenaraikan apa yang anda dapat, supaya anda tahu apa yang akan anda terima sebelum kerja bermula.",
+    promo: {
+      badge: "Promosi Pelancaran — Tempat Terhad",
+      note: "* Kadar promosi terpakai untuk 10 klien pertama sahaja.",
+    },
     currencyLabel: "Semua harga dalam",
     currencyValue: "Ringgit Malaysia (RM)",
     fromLabel: "Dari",

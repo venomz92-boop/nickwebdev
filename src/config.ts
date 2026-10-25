@@ -42,13 +42,14 @@ export type WebsitePackageId = "simple" | "business" | "plus" | "custom";
 export const websitePackages: ReadonlyArray<{
   id: WebsitePackageId;
   price: string;
+  originalPrice?: string;
   featured?: boolean;
   premium?: boolean;
 }> = [
-  { id: "simple", price: "RM399" },
-  { id: "business", price: "RM799", featured: true },
-  { id: "plus", price: "RM1,299", premium: true },
-  { id: "custom", price: "RM2,499" },
+  { id: "simple", price: "RM399", originalPrice: "RM899" },
+  { id: "business", price: "RM799", originalPrice: "RM1,599", featured: true },
+  { id: "plus", price: "RM1,299", originalPrice: "RM2,499", premium: true },
+  { id: "custom", price: "RM2,499", originalPrice: "RM4,999" },
 ];
 
 /** Package choices offered in the enquiry form, including "not sure yet". */

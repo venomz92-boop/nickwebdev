@@ -120,6 +120,10 @@ export const en = {
     titleLead: "Choose the Right Website",
     titleAccent: "for Your Business",
     lede: "Three straightforward packages for businesses at different stages, plus a custom option for anything outside the standard scope. Each one lists exactly what you get, so there are no surprises before work starts.",
+    promo: {
+      badge: "Launch Promo — Limited Spots Available",
+      note: "* Promotional rates apply to the first 10 clients only.",
+    },
     currencyLabel: "All prices in",
     currencyValue: "Malaysian Ringgit (RM)",
     fromLabel: "From",

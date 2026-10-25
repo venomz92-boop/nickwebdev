@@ -14,6 +14,13 @@ export function Pricing({ onSelectPackage }: PricingProps) {
     <section className="section pricing" id="pricing" aria-labelledby="pricing-title">
       <div className="pricing__backdrop" aria-hidden="true" />
       <div className="container">
+        <Reveal className="pricing-promo">
+          <span className="pricing-promo__icon" aria-hidden="true">
+            🔥
+          </span>
+          <span>{t.pricing.promo.badge}</span>
+        </Reveal>
+
         <Reveal className="section-head section-head--split section-head--pricing">
           <div>
             <p className="eyebrow">
@@ -56,16 +63,27 @@ export function Pricing({ onSelectPackage }: PricingProps) {
                   </span>
                   <h3 className="pricing-card__name">{copy.name}</h3>
                 </div>
-                <div className="pricing-card__price">
-                  {isCustom && (
-                    <span className="pricing-card__from">
-                      {t.pricing.fromLabel}
-                    </span>
+                <div className="pricing-card__pricing">
+                  {item.originalPrice && (
+                    <p className="pricing-card__original">
+                      <s>
+                        {isCustom
+                          ? `${t.pricing.fromLabel} ${item.originalPrice}`
+                          : item.originalPrice}
+                      </s>
+                    </p>
                   )}
-                  <span className="pricing-card__currency">RM</span>
-                  <span className="pricing-card__amount">
-                    {item.price.replace("RM", "")}
-                  </span>
+                  <div className="pricing-card__price">
+                    {isCustom && (
+                      <span className="pricing-card__from">
+                        {t.pricing.fromLabel}
+                      </span>
+                    )}
+                    <span className="pricing-card__currency">RM</span>
+                    <span className="pricing-card__amount">
+                      {item.price.replace("RM", "")}
+                    </span>
+                  </div>
                 </div>
                 <p className="pricing-card__description">{copy.description}</p>
 
@@ -105,6 +123,8 @@ export function Pricing({ onSelectPackage }: PricingProps) {
             );
           })}
         </div>
+
+        <p className="pricing__promo-note">{t.pricing.promo.note}</p>
 
         <Reveal className="pricing-rounds" delay={80}>
           <span className="pricing-rounds__label">{t.pricing.rounds.label}</span>
