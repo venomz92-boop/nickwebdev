@@ -66,6 +66,9 @@ export function Pricing({ onSelectPackage }: PricingProps) {
                 <div className="pricing-card__pricing">
                   {item.originalPrice && (
                     <p className="pricing-card__original">
+                      <span className="pricing-card__original-label">
+                        {t.pricing.promo.originalLabel}
+                      </span>
                       <s>
                         {isCustom
                           ? `${t.pricing.fromLabel} ${item.originalPrice}`

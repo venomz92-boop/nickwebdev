@@ -122,6 +122,7 @@ export const en = {
     lede: "Three straightforward packages for businesses at different stages, plus a custom option for anything outside the standard scope. Each one lists exactly what you get, so there are no surprises before work starts.",
     promo: {
       badge: "Launch Promo — Limited Spots Available",
+      originalLabel: "Normal price",
       note: "* Promotional rates apply to the first 10 clients only.",
     },
     currencyLabel: "All prices in",
