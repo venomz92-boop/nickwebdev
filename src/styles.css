@@ -2167,6 +2167,7 @@ main,
   inset: 0;
   pointer-events: none;
   background:
+    radial-gradient(ellipse at 16% 0%, rgba(255, 126, 64, 0.08), transparent 34%),
     radial-gradient(ellipse at 50% -10%, rgba(76, 112, 255, 0.09), transparent 43%),
     radial-gradient(ellipse at 78% 52%, rgba(152, 85, 255, 0.045), transparent 34%);
 }
@@ -2181,32 +2182,54 @@ main,
 }
 
 .pricing-promo {
-  display: inline-flex;
+  display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  margin-bottom: 24px;
-  padding: 8px 13px 7px;
-  border: 1px solid rgba(255, 164, 102, 0.28);
-  border-radius: 999px;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+  padding: 12px 18px;
+  border: 1px solid rgba(255, 164, 102, 0.3);
+  border-radius: 12px;
   background: linear-gradient(
     90deg,
-    rgba(255, 126, 64, 0.12),
-    rgba(152, 85, 255, 0.09)
+    rgba(255, 126, 64, 0.13),
+    rgba(255, 76, 103, 0.07) 52%,
+    rgba(152, 85, 255, 0.08)
   );
   color: #ffd8bd;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 650;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   line-height: 1.35;
   text-transform: uppercase;
-  box-shadow: 0 0 24px rgba(255, 119, 60, 0.08);
+  box-shadow:
+    0 14px 34px rgba(255, 100, 50, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .pricing-promo__icon {
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1;
   filter: drop-shadow(0 0 6px rgba(255, 139, 72, 0.35));
+}
+
+.pricing-promo__label {
+  color: #ffd8bd;
+}
+
+.pricing-promo__divider {
+  width: 1px;
+  height: 13px;
+  background: rgba(255, 164, 102, 0.32);
+}
+
+.pricing-promo__detail {
+  margin-left: auto;
+  color: #d8a98d;
+  font-size: 9.5px;
+  letter-spacing: 0.08em;
+  white-space: nowrap;
 }
 
 .pricing__promo-note {
@@ -2381,6 +2404,39 @@ main,
   margin-top: 24px;
 }
 
+.pricing-card__promo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.pricing-card__promo-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border: 1px solid rgba(255, 164, 102, 0.34);
+  border-radius: 999px;
+  background: rgba(255, 126, 64, 0.12);
+  color: #ffc9a3;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
+.pricing-card__savings {
+  margin-left: auto;
+  color: #ffb07c;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  text-transform: uppercase;
+}
+
 .pricing-card__original {
   display: flex;
   flex-wrap: wrap;
@@ -2415,27 +2471,27 @@ main,
 }
 
 .pricing-card__from {
-  margin-top: 16px;
+  margin-top: 14px;
   color: #8c95a9;
-  font-size: 10.5px;
+  font-size: 10px;
   font-weight: 650;
   letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
 .pricing-card__currency {
-  margin-top: 14px;
+  margin-top: 12px;
   color: #8c95a9;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 550;
   letter-spacing: 0.04em;
 }
 
 .pricing-card__amount {
   font-family: var(--font-display);
-  font-size: clamp(4.1rem, 5.8vw, 5.5rem);
+  font-size: clamp(3.4rem, 4.6vw, 4.25rem);
   font-weight: 680;
-  line-height: 0.88;
+  line-height: 0.9;
   letter-spacing: -0.06em;
 }
 
@@ -4287,14 +4343,38 @@ main,
   }
 
   .pricing-card__amount {
-    font-size: 4rem;
+    font-size: 3.3rem;
   }
 
   .pricing-promo {
-    margin-bottom: 20px;
-    padding: 7px 11px 6px;
+    gap: 8px;
+    margin-bottom: 22px;
+    padding: 10px 12px;
     font-size: 9.5px;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.075em;
+  }
+
+  .pricing-promo__divider {
+    display: none;
+  }
+
+  .pricing-promo__detail {
+    flex-basis: 100%;
+    margin-left: 0;
+    padding-left: 22px;
+    font-size: 8.5px;
+  }
+
+  .pricing-card__promo-row {
+    gap: 7px;
+  }
+
+  .pricing-card__promo-tag {
+    font-size: 8.5px;
+  }
+
+  .pricing-card__savings {
+    font-size: 9.5px;
   }
 
   .pricing-card__original {
@@ -4307,13 +4387,13 @@ main,
   }
 
   .pricing-card__from {
-    margin-top: 14px;
-    font-size: 10px;
+    margin-top: 12px;
+    font-size: 9.5px;
   }
 
   .pricing-card__currency {
-    margin-top: 12px;
-    font-size: 14.5px;
+    margin-top: 11px;
+    font-size: 14px;
   }
 
   .pricing-card__list {

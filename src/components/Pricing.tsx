@@ -7,6 +7,10 @@ type PricingProps = {
   onSelectPackage: (packageOption: PackageOption) => void;
 };
 
+function parseRmPrice(value: string): number {
+  return Number(value.replace(/[^\d]/g, ""));
+}
+
 export function Pricing({ onSelectPackage }: PricingProps) {
   const { t } = useI18n();
 
@@ -18,7 +22,11 @@ export function Pricing({ onSelectPackage }: PricingProps) {
           <span className="pricing-promo__icon" aria-hidden="true">
             🔥
           </span>
-          <span>{t.pricing.promo.badge}</span>
+          <span className="pricing-promo__label">{t.pricing.promo.badge}</span>
+          <span className="pricing-promo__divider" aria-hidden="true" />
+          <span className="pricing-promo__detail">
+            {t.pricing.promo.detail}
+          </span>
         </Reveal>
 
         <Reveal className="section-head section-head--split section-head--pricing">
@@ -44,10 +52,13 @@ export function Pricing({ onSelectPackage }: PricingProps) {
           {websitePackages.map((item, index) => {
             const copy = t.pricing.packages[item.id];
             const isCustom = item.id === "custom";
+            const savings = item.originalPrice
+              ? parseRmPrice(item.originalPrice) - parseRmPrice(item.price)
+              : 0;
 
             return (
               <Reveal
-                className={`pricing-card${item.featured ? " pricing-card--featured" : ""}${item.premium ? " pricing-card--premium" : ""}`}
+                className={`pricing-card pricing-card--promo${item.featured ? " pricing-card--featured" : ""}${item.premium ? " pricing-card--premium" : ""}`}
                 key={item.id}
                 delay={index * 80}
                 as="article"
@@ -64,6 +75,17 @@ export function Pricing({ onSelectPackage }: PricingProps) {
                   <h3 className="pricing-card__name">{copy.name}</h3>
                 </div>
                 <div className="pricing-card__pricing">
+                  <div className="pricing-card__promo-row">
+                    <span className="pricing-card__promo-tag">
+                      {t.pricing.promo.tag}
+                    </span>
+                    {savings > 0 && (
+                      <span className="pricing-card__savings">
+                        {t.pricing.promo.save} RM
+                        {savings.toLocaleString("en-MY")}
+                      </span>
+                    )}
+                  </div>
                   {item.originalPrice && (
                     <p className="pricing-card__original">
                       <span className="pricing-card__original-label">
